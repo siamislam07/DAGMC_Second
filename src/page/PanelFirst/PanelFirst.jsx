@@ -28,6 +28,9 @@ const PanelFirst = () => {
     }, [])
     return (
         <>
+        <audio  loop="1" autoPlay>
+            <source src='./firstAudio.mp3'></source>
+        </audio>
             {/* <PageTitle title="Panel Member"/> */}
             <img className=" mt-10 w-full" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Panel%20Member&section=header&reversal=false&fontAlignY=50&animation=twinkling&strokeWidth=0&fontSize=33" />
 
@@ -46,9 +49,6 @@ const PanelFirst = () => {
                                 <img className='object-cover  h-80 p-3 w-full group-hover:scale-110 transition shadow-2xl shadow-[#00f7ff] border-[#00f7ff]'
                                     src={item?.pic}
                                     alt='Room' />
-                                {/* <div className='absolute top-3 right-3'>
-
-</div> */}
                             </div>
                             <div className='font-semibold text-white ml-4 mt-0'>{item?.name}</div>
 

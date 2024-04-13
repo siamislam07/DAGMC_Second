@@ -1,11 +1,11 @@
 const AboutUs = () => {
   return (
     <div className="max-w-[1200px] p-3  mx-auto mb-10">
-      <div className="card card-body card-compact caret-red-700  text-2xl leading-relaxed text-center   w-full   font-bold bg-[#00f7ff] shadow-2xl shadow-[#00f7ff] relative border-2 rounded-lg bg-transparent py-2.5 px-5  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full text-[#00f7ff] before:w-full before:origin-top-left before:scale-y-0 before:bg-[#00f7ff] before:transition-transform border-[#00f7ff]">
+      <div className="card card-body card-compact caret-red-700  text-2xl  text-center   w-full   font-bold bg-[#00f7ff] shadow-2xl shadow-[#00f7ff] relative border-2 rounded-lg bg-transparent py-2.5 px-5  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full text-[#00f7ff] before:w-full before:origin-top-left before:scale-y-0 before:bg-[#00f7ff] before:transition-transform border-[#00f7ff]">
         <h3 className="font-bold text-red-500 text-4xl mb-2">
           About Our Debating Club
         </h3>
-        <p className="p-2 text-lg lg:text-balance  text-left">
+        <p className="p-2 text-lg lg:text-balance text-left md:text-center">
           Welcome to our debate club, where ideas collide and minds ignite! We
           are a passionate community dedicated to honing critical thinking
           skills, fostering respectful dialogue, and embracing diverse
