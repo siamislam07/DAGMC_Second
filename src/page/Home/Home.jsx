@@ -14,6 +14,8 @@ const Home = () => {
 
     return (
         <>
+       
+
         <PageTitle title="Home"/>
             <FirstImage />
             <SecendImage/> 

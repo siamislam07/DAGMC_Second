@@ -2,6 +2,8 @@ import Center from "../../utilits/Center";
 // import MessengerCustomerChat from 'react-messenger-customer-chat';
 const Footer = () => {
   return (
+<>
+
     <div className="border-t">
 
     <Center>
@@ -26,7 +28,7 @@ const Footer = () => {
 
       /> */}
     </div>
-
+    </>
   );
 };
 
