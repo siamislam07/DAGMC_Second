@@ -28,7 +28,7 @@ const PanelFirst = () => {
     }, [])
     return (
         <>
-        <audio  loop="1" autoPlay>
+        <audio  loop autoPlay>
             <source src='./firstAudio.mp3'></source>
         </audio>
             {/* <PageTitle title="Panel Member"/> */}
