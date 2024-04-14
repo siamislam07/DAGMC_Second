@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import img from '../../image/homeimage2.png';
+// import img from '../../image/homeimage2.png';
 import fb from '../../image/icons/facebook1.png';
 import gmail from '../../image/icons/gmail.png'
 // import wp from '../../image/icons/whatsapp.png'

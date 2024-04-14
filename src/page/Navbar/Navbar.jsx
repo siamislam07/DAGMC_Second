@@ -119,6 +119,8 @@ const Navbar = () => {
     </>
 
     return (
+
+        
         <div className=" w-full  navbar  shadow-2xl mb-12 ">
             <div className="w-full max-w-[1600px] mx-auto     xl:px-30 md:px-10 sm:px-2 px-4">
 
@@ -149,7 +151,9 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-
+                <audio loop="1" autoPlay>homeVideo.mp3
+            <source src='./homeVideo.mp3'></source>
+                </audio>
 
             </div>
         </div>
