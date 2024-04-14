@@ -30,8 +30,11 @@ const Email = () => {
     };
     const { View } = useLottie(options);
     return (
+       <>
 
-
+<audio loop='1' autoPlay>
+    <source src='./homeAuideo.mp3' />
+</audio>
         <div className="w-full  max-w-6xl mx-auto shadow-2xl shadow-[#00f7ff] border-[#00f7ff]">
             <img className="border-t border-b mx-auto shadow-2xl shadow-[#00f7ff] border-[#00f7ff]" src="https://capsule-render.vercel.app/api?type=venom&height=305&color=gradient&text=Get%20In%20Touch&textBg=false&animation=fadeIn&stroke=00f7ff&strokeWidth=-1" alt="" />
 
@@ -65,6 +68,7 @@ const Email = () => {
                 </form>
             </div>
         </div>
+        </>
     );
 };
 

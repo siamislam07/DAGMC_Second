@@ -31,11 +31,17 @@ const FirstImage = () => {
 
   return (
 
+    <>
+
     <div className="relative mx-auto">
 
       <div className="hero transition-colors before:absolute before:-z-10 before:h-full text-white before:w-full before:origin-top-left  before:scale-x-0 before:bg-gradient-to-r from-violet-600 to-indigo-600 before:transition-transform before:duration-500 hover:text-black  before:hover:scale-x-100 ">
         <div className="hero-content rounded-lg mt-8 overflow-hidden items-center gap-20 flex-col-reverse md:flex-row lg:flex-row-reverse   border-gray-800  ">
-          <img data-aos="zoom-in-down" src="https://i.ibb.co/gWcSk22/second.jpg" className='w-auto max-w-80 md:max-w-sm rounded-lg shadow-2xl	box-shadow: 80 25px 50px -12px rgb(5 5 5 / 500) shadow-[#00f7ff] ' />
+          {/* <img data-aos="zoom-in-down" src="https://i.ibb.co/gWcSk22/second.jpg" className='w-auto max-w-80 md:max-w-sm rounded-lg shadow-2xl	box-shadow: 80 25px 50px -12px rgb(5 5 5 / 500) shadow-[#00f7ff] ' /> */}
+
+          <video autoPlay loop muted width='500px'>
+            <source src="./homeimage.mp4"/>
+          </video>
           {/* <div className="  sm:w-full sm:h-full md:w-[720px] md:h-[450px]  shadow-2xl md:rounded-md mt-3 	box-shadow: 80 25px 50px -12px rgb(5 5 5 / 500) shadow-[#00f7ff]">
             <CubePagination />
           </div> */}
@@ -75,7 +81,7 @@ const FirstImage = () => {
 
       />
     </div>
-
+    </>
 
   );
 };

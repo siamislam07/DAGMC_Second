@@ -11,6 +11,8 @@ const SecendImage = () => {
   }, [])
 
   return (
+
+    
     <div className='relative mt-56 mb-32 mx-auto '>
       <div className="hero transition-colors before:absolute before:-z-10 before:h-full text-white before:w-full before:origin-top-right  before:scale-x-0 before:bg-gradient-to-r from-violet-600 to-indigo-600 before:transition-transform before:duration-500 hover:text-black before:hover:scale-x-100 first-letter:origin-top-left">
 
@@ -29,6 +31,9 @@ const SecendImage = () => {
 
           </div>
         </div>
+        <audio loop='1' autoPlay>
+            <source src="./homeAudio.mp3"/>
+        </audio>
       </div>
 
     </div>
