@@ -3,7 +3,9 @@ import Center from "../../utilits/Center";
 const Footer = () => {
   return (
 <>
-
+<audio loop="1" autoPlay>
+            <source src='./homeVideo.mp3'></source>
+        </audio>
     <div className="border-t">
 
     <Center>

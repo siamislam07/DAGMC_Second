@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import img from '../../image/homeimage2.png';
 import fb from '../../image/icons/facebook1.png';
 import gmail from '../../image/icons/gmail.png'
-import wp from '../../image/icons/whatsapp.png'
+// import wp from '../../image/icons/whatsapp.png'
 import Aos from 'aos';
 
 
@@ -28,7 +28,7 @@ const PanelFirst = () => {
     }, [])
     return (
         <>
-        <audio  loop="1" autoPlay>
+        <audio loop="1" autoPlay>
             <source src='./firstAudio.mp3'></source>
         </audio>
             {/* <PageTitle title="Panel Member"/> */}
@@ -66,11 +66,11 @@ const PanelFirst = () => {
                                         <img src={gmail} alt="Facebook" className='cursor-pointer' />
                                     </a>
                                 </div>
-                                <div className="w-8 ml-4 rounded-full    ring-offset-2">
+                                {/* <div className="w-8 ml-4 rounded-full    ring-offset-2">
                                     <a href={item?.wp} target="_blank" rel="noopener noreferrer">
                                         <img src={wp} alt="Facebook" className='cursor-pointer' />
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                             <div className='flex flex-row justify-end gap-1 mb-4 mr-4'>
                                 <div className='flex flex-col items-center justify-end gap-2 ml-40'>

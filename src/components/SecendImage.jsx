@@ -31,9 +31,7 @@ const SecendImage = () => {
 
           </div>
         </div>
-        <audio loop='1' autoPlay>
-            <source src="./homeAudio.mp3"/>
-        </audio>
+        
       </div>
 
     </div>
