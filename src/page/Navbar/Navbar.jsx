@@ -111,8 +111,6 @@ const Navbar = () => {
         <li><NavLink to='/gallery' className="btn btn-outline btn-default    border-b-amber-600 border-neutral normal-case text-lg  transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  hover:bg-[#00f7ff] hover:border-none">Gallery </NavLink></li>
         <li><NavLink to='/e-workshop' className="btn btn-outline btn-default    border-b-amber-300 border-neutral normal-case text-lg  transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none">E- WorkShop</NavLink></li>
 
-
-
         <NavBarProfile />
 
 
@@ -151,9 +149,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <audio loop="1" autoPlay>homeVideo.mp3
-            <source src='./homeVideo.mp3'></source>
-                </audio>
+               
 
             </div>
         </div>

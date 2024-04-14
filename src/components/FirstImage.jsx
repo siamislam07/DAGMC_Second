@@ -40,7 +40,7 @@ const FirstImage = () => {
           {/* <img data-aos="zoom-in-down" src="https://i.ibb.co/gWcSk22/second.jpg" className='w-auto max-w-80 md:max-w-sm rounded-lg shadow-2xl	box-shadow: 80 25px 50px -12px rgb(5 5 5 / 500) shadow-[#00f7ff] ' /> */}
 
           <video autoPlay loop muted width='500px'>
-            <source src="./homeimage.mp4"/>
+            <source src="./homeSlider.mp4"/>
           </video>
           {/* <div className="  sm:w-full sm:h-full md:w-[720px] md:h-[450px]  shadow-2xl md:rounded-md mt-3 	box-shadow: 80 25px 50px -12px rgb(5 5 5 / 500) shadow-[#00f7ff]">
             <CubePagination />
