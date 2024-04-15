@@ -3,8 +3,7 @@ import { useEffect, useState } from 'react';
 // import img from '../../image/homeimage2.png';
 import fb from '../../image/icons/facebook1.png';
 import gmail from '../../image/icons/gmail.png'
-import wp from '../../image/icons/whatsapp.png'
-import Aos from 'aos';
+// import wp from '../../image/icons/whatsapp.png'
 
 
 
@@ -27,9 +26,8 @@ const PanelThird = () => {
 
         fetchImages();
     }, []);
-    useEffect(() => {
-        Aos.init({ duration: 2000 })
-    }, [])
+
+
     return (
 
         <>
@@ -57,7 +55,7 @@ const PanelThird = () => {
                             <div className='font-light text-[#00f7ff] ml-4'>
                                 {item?.title}
                             </div>
-                            <div className='avatar mt-2'>
+                            <div className='avatar gap-3 mt-2'>
                                 <div className="w-8 ml-4 rounded-full ring-offset-2">
                                     <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
                                         <img src={fb} alt="Facebook" className='cursor-pointer' />
@@ -68,11 +66,11 @@ const PanelThird = () => {
                                         <img src={gmail} alt="Facebook" className='cursor-pointer' />
                                     </a>
                                 </div>
-                                <div className="w-8 ml-4 rounded-full    ring-offset-2">
-                                    <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
-                                        <img src={wp} alt="Facebook" className='cursor-pointer' />
-                                    </a>
-                                </div>
+                                {/* <div className="w-8 ml-4 rounded-full    ring-offset-2">
+                <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
+                    <img src={wp} alt="Facebook" className='cursor-pointer' />
+                </a>
+            </div> */}
                             </div>
                             <div className='flex flex-row justify-end items-end gap-1 mb-4 mr-4'>
                                 <div className='flex flex-col ml-40 items-center gap-2'>
@@ -113,7 +111,6 @@ const PanelThird = () => {
 };
 
 export default PanelThird;
-
 
 
 

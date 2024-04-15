@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 // import img from '../../image/homeimage2.png';
 import fb from '../../image/icons/facebook1.png';
 import gmail from '../../image/icons/gmail.png'
-import wp from '../../image/icons/whatsapp.png'
-import Aos from 'aos';
+// import wp from '../../image/icons/whatsapp.png'
 
 
 
@@ -26,9 +25,7 @@ const PanelSecend = () => {
 
         fetchImages();
     }, []);
-    useEffect(() => {
-        Aos.init({ duration: 2000 })
-    }, [])
+
     return (
 
         <>
@@ -47,7 +44,9 @@ const PanelSecend = () => {
                                 <img className='object-cover  h-80 p-3 w-full group-hover:scale-110 transition border-[#00f7ff]'
                                     src={item?.pic}
                                     alt='Room' />
-                            
+                                {/* <div className='absolute top-3 right-3'>
+
+</div> */}
                             </div>
                             <div className='font-semibold text-white text-lg ml-4 mt-0'>{item?.name}</div>
 
@@ -61,15 +60,15 @@ const PanelSecend = () => {
                                     </a>
                                 </div>
                                 <div className="w-8 ml-4 rounded-full    ring-offset-2">
-                                    <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
+                                    <a href={item?.gmail} target="_blank" rel="noopener noreferrer">
                                         <img src={gmail} alt="Facebook" className='cursor-pointer' />
                                     </a>
                                 </div>
-                                <div className="w-8 ml-4 rounded-full    ring-offset-2">
-                                    <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
-                                        <img src={wp} alt="Facebook" className='cursor-pointer' />
-                                    </a>
-                                </div>
+                                {/* <div className="w-8 ml-4 rounded-full    ring-offset-2">
+                <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
+                    <img src={wp} alt="Facebook" className='cursor-pointer' />
+                </a>
+            </div> */}
                             </div>
                             <div className='flex flex-row justify-end items-end gap-1 mb-4 mr-4'>
                                 <div className='flex flex-col items-center gap-2 ml-40'>
