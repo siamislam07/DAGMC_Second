@@ -9,67 +9,70 @@
     },
     {
         "name": "Ummul Khair Fatema",
-        "title": "President",
+        "title": "vice president",
         "pic": "https://i.ibb.co/NKqQ8FT/download-2.jpg",
         "fbUrl": "",
-        "gmail": "ukfatema2807@gmail.com"
+        "gmail": "mailto:ukfatema2807@gmail.com"
     },
     {
+
+    "name": "Jamil Ahmed",
+    "title": "Vice President",
+    "pic": " https://i.ibb.co/phDGghL/download-1.jpg",
+    "fbUrl": "https://www.facebook.com/jakiaakter.jimi?mibextid=ZbWKwL",
+    "gmail": "mailto:jamilmahmud1196510@gmail.com"
+
+    },
+    {
+    
         "name": "Mohema Akter",
-        "title": "Assistant General Secretary ",
+        "title": "Organizing Secretary ",
         "pic": "https://i.ibb.co/NYkGyhg/bef8a9cf-d1ce-47c1-8204-65cc5d41ed88.jpg",
         "fbUrl": "https://www.facebook.com/mohema.moon?mibextid=ZbWKwL",
-        "gmail": "mohemamoon2005@gmail.com"
-    },
-    {
-        "name": "Jamil Ahmed",
-        "title": "Vice President",
-        "pic": " https://i.ibb.co/phDGghL/download-1.jpg",
-        "fbUrl": "https://www.facebook.com/jakiaakter.jimi?mibextid=ZbWKwL",
-        "gmail": "jamilmahmud1196510@gmail.com"
+        "gmail": "mailto:mohemamoon2005@gmail.com"
 
         
     },
     {
         "name": "Humaira Fairuj  Samiha",
-        "title": "Treasurer",
+        "title": "head of instractor",
         "pic": "https://i.ibb.co/74tcW9R/171c5342-a19d-48f5-844d-09246948d10d.jpg",
         "fbUrl": "https://www.facebook.com/saifalmobaraza.saif?mibextid=ZbWKwL",
-        "gmail": "Sultananitu6@gmail.com"
+        "gmail": "mailto:Sultananitu6@gmail.com"
     },
     {
-        "name": "Adiba Ali Tabassum",
-        "title": "tttttt",
+        "name": "Adiba ali tabassum",
+        "title": "senior exicutive ",
         "pic": "https://i.ibb.co/ZhKqH58/download-3.jpg",
         "fbUrl": "https://www.facebook.com/adibaalitabassum?mibextid=ZbWKwL",
-        "gmail": "adibaalitabassum2005@gmail.com"
+        "gmail": "mailto:adibaalitabassum2005@gmail.com"
     },
     {
         "name": "Ashab Kabir",
-        "title": "tttttt",
-        "pic": "https://i.ibb.co/3W4wb5Q/6c75d8fc-f418-4646-b147-55fe99884275.jpg",
+        "title": "assistant general Secretary{morning}",
+        "pic":  "https://i.ibb.co/7WSVvxw/2052b741-938d-43a3-9e72-210ede41a247.jpg",
         "fbUrl": "https://www.facebook.com/factfinder08?mibextid=ZbWKwL",
-        "gmail": "ashabkabir22@gmail.com"
+        "gmail": "mailto:ashabkabir22@gmail.com"
     },
     {
-        "name": "ttttt",
-        "title": "tttttt",
-        "pic": "https://i.ibb.co/7WSVvxw/2052b741-938d-43a3-9e72-210ede41a247.jpg",
+        "name": "Tasnuva Hafsa Chowdhury",
+        "title": "head of instructor [morning]",
+        "pic": "https://i.ibb.co/3W4wb5Q/6c75d8fc-f418-4646-b147-55fe99884275.jpg",
         "fbUrl": "",
-        "gmail": "islamsawan466@gmail.com"
+        "gmail": "mailto:Sultananitu6@gmail.com"
     },
     {
         "name": "ttttt",
         "title": "",
         "pic": "https://i.ibb.co/C1mJxD3/601bc5db-f3db-48db-ab4f-54cd69241f46-1.jpg",
         "fbUrl": "",
-        "gmail": "islamsawan466@gmail.com"
+        "gmail": "mailto:islamsawan466@gmail.com"
     },
     {
         "name": "ttttt",
         "title": "tttttt",
         "pic": "https://i.ibb.co/D8kW4XK/769fb899-7ffc-4295-b3a9-842aab97dec9.jpg",
         "fbUrl": "",
-        "gmail": "islamsawan466@gmail.com"
+        "gmail": "mailto:islamsawan466@gmail.com"
     }
 ]

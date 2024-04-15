@@ -15,9 +15,9 @@ const Home = () => {
 
     return (
         <>
-            <audio loop autoPlay>
-                <source src="./homeAudiotrimerd.mp3" />
-            </audio>
+            <audio  loop autoPlay>
+            <source src='./homeAudio.mp3'></source>
+        </audio>
 
             <PageTitle title="Home" />
             <FirstImage />
