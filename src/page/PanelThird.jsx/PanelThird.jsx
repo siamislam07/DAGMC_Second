@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 // import img from '../../image/homeimage2.png';
 import fb from '../../image/icons/facebook1.png';
 import gmail from '../../image/icons/gmail.png'
+import Aos from 'aos';
 // import wp from '../../image/icons/whatsapp.png'
 
 
@@ -10,23 +11,41 @@ import gmail from '../../image/icons/gmail.png'
 
 const PanelThird = () => {
 
-
     const [info, setInfo] = useState()
 
     useEffect(() => {
-        const fetchImages = async () => {
+        const fetchPanelThirdData = async () => {
             try {
-                const response = await fetch('/PanelThird.json');
+                const response = await fetch('http://localhost:3000/panelThird'); // Make a GET request to your server's endpoint
                 const data = await response.json();
                 setInfo(data);
             } catch (error) {
-                console.error('Error fetching images:', error);
+                console.error('Error fetching panelThird data:', error);
             }
         };
 
-        fetchImages();
-    }, []);
+        fetchPanelThirdData();
 
+    }, [])
+
+
+    // useEffect(() => {
+    //     const fetchImages = async () => {
+    //         try {
+    //             const response = await fetch('/PanelThird.json');
+    //             const data = await response.json();
+    //             setInfo(data);
+    //         } catch (error) {
+    //             console.error('Error fetching images:', error);
+    //         }
+    //     };
+
+    //     fetchImages();
+    // }, []);
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, [])
 
     return (
 
@@ -62,7 +81,7 @@ const PanelThird = () => {
                                     </a>
                                 </div>
                                 <div className="w-8 ml-4 rounded-full    ring-offset-2">
-                                    <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
+                                    <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(item?.gmail)}`} target="_blank" rel="noopener noreferrer">
                                         <img src={gmail} alt="Facebook" className='cursor-pointer' />
                                     </a>
                                 </div>

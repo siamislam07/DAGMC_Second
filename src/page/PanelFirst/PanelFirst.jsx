@@ -13,7 +13,7 @@ const PanelFirst = () => {
     useEffect(() => {
         const fetchImages = async () => {
             try {
-                const response = await fetch('/PanelFirst.json');
+                const response = await fetch('http://localhost:3000/panelFirst');
                 const data = await response.json();
                 setInfo(data);
             } catch (error) {
@@ -23,9 +23,14 @@ const PanelFirst = () => {
 
         fetchImages();
     }, []);
+
+
+
     useEffect(() => {
         Aos.init({ duration: 2000 })
     }, [])
+
+
     return (
         <>
         <audio loop="1" autoPlay>
@@ -62,7 +67,7 @@ const PanelFirst = () => {
                                     </a>
                                 </div>
                                 <div className="w-8 ml-4 rounded-full    ring-offset-2">
-                                    <a href={item?.gmail} target="_blank" rel="noopener noreferrer">
+                                    <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(item?.gmail)}`} target="_blank" rel="noopener noreferrer">
                                         <img src={gmail} alt="Facebook" className='cursor-pointer' />
                                     </a>
                                 </div>
