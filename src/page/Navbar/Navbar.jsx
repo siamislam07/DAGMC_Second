@@ -111,14 +111,14 @@ const Navbar = () => {
         <li><NavLink to='/gallery' className="btn btn-outline btn-default    border-b-amber-600 border-neutral normal-case text-lg  transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  hover:bg-[#00f7ff] hover:border-none">Gallery </NavLink></li>
         <li><NavLink to='/e-workshop' className="btn btn-outline btn-default    border-b-amber-300 border-neutral normal-case text-lg  transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none">E- WorkShop</NavLink></li>
 
-
-
         <NavBarProfile />
 
 
     </>
 
     return (
+
+        
         <div className=" w-full  navbar  shadow-2xl mb-12 ">
             <div className="w-full max-w-[1600px] mx-auto     xl:px-30 md:px-10 sm:px-2 px-4">
 
@@ -149,7 +149,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-
+               
 
             </div>
         </div>

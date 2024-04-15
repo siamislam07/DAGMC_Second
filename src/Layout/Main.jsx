@@ -8,34 +8,29 @@ import SparkContainer from "@kamiru/react-spark";
 
 
 const Main = () => {
-    const [loading, setLoading] = useState(false)
-
-    useEffect(() => {
+    const [loading, setLoading ] = useState(false)
+    
+    useEffect(()=>{
         setLoading(true)
-        setTimeout(() => {
+        setTimeout(()=>{
             setLoading(false)
         }, 2000)
-    }, [])
-
-
+    },[])
     return (
-        <>
-            <SparkContainer randomnessOn={true} className=" ">
+        <SparkContainer randomnessOn={true}   className=" ">
+            {loading? <Loader/>:<>
+            <Navbar/>
 
-                {loading ? <Loader /> : <>
-                    <Navbar />
+            <div className="min-h-[calc(100vh-68px)]">
+                <Outlet>
 
-                    <div className="min-h-[calc(100vh-68px)]">
-                        <Outlet>
-
-                        </Outlet>
-                    </div>
-
-                    <Footer />
-                </>
-                }
-            </SparkContainer>
-        </>
+                </Outlet>
+            </div>
+            
+            <Footer/>
+            </>
+            }
+        </SparkContainer>
     );
 };
 
