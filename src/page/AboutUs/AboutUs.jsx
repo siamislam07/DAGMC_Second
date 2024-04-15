@@ -61,6 +61,9 @@ const AboutUs = () => {
           </p>
         </div>
 
+
+        
+
         <div data-aos="fade-left" className="card overflow-hidden card-body w-full card-compact caret-red-700  text-2xl text-center    mx-auto  p-3  font-bold bg-[#00f7ff] shadow-2xl shadow-[#00f7ff]  border-2 rounded-lg bg-transparent py-2.5 px-5  transition-colors before:absolute before:left-0 before:top-0 before:-z-10  text-[#00f7ff]  before:bg-[#00f7ff] before:transition-transform border-[#00f7ff] ">
           <h3 className="font-bold text-red-500 text-4xl mb-2">
             <div className="flex items-center justify-center flex-col">
