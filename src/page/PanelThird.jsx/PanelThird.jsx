@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 // import img from '../../image/homeimage2.png';
 import fb from '../../image/icons/facebook1.png';
 import gmail from '../../image/icons/gmail.png'
+import Aos from 'aos';
 // import wp from '../../image/icons/whatsapp.png'
 
 
@@ -26,6 +27,9 @@ const PanelThird = () => {
 
         fetchImages();
     }, []);
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, [])
 
 
     return (
@@ -62,7 +66,7 @@ const PanelThird = () => {
                                     </a>
                                 </div>
                                 <div className="w-8 ml-4 rounded-full    ring-offset-2">
-                                    <a href={item?.fbUrl} target="_blank" rel="noopener noreferrer">
+                                    <a href={item?.gmail} target="_blank" rel="noopener noreferrer">
                                         <img src={gmail} alt="Facebook" className='cursor-pointer' />
                                     </a>
                                 </div>
