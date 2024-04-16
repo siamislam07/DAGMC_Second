@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
-import { AuthContext } from "../../providers/AuthProvider";
-import UserTabs from "../../components/UserTabs";
+// import { AuthContext } from "../../providers/AuthProvider";
+// import UserTabs from "../../components/UserTabs";
+import { AuthContext } from "../../../providers/AuthProvider";
 // import UserTabs from "../../components/UserTabs";
 
 const Profile = () => {

@@ -5,39 +5,55 @@ import fb from '../../image/icons/facebook1.png';
 import gmail from '../../image/icons/gmail.png'
 // import wp from '../../image/icons/whatsapp.png'
 import Aos from 'aos';
+import {   useQuery } from '@tanstack/react-query';
+// import { useQueries } from '@tanstack/react-query';
 
 
 const PanelFirst = () => {
-    const [info, setInfo] = useState()
+    // const [info, setInfo] = useState()
 
-    useEffect(() => {
-        const fetchImages = async () => {
-            try {
-                const response = await fetch('http://localhost:3000/panelFirst');
-                const data = await response.json();
-                setInfo(data);
-            } catch (error) {
-                console.error('Error fetching images:', error);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchImages = async () => {
+    //         try {
+    //             const response = await fetch('http://localhost:3000/panelFirst');
+    //             const data = await response.json();
+    //             setInfo(data);
+    //         } catch (error) {
+    //             console.error('Error fetching images:', error);
+    //         }
+    //     };
 
-        fetchImages();
-    }, []);
+    //     fetchImages();
+    // }, []);
 
+    const { isPending, data: info, isError, error } = useQuery({
+        queryKey: ['panelFirst'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:3000/panelFirst')
+            return res.json()
+        }
+    })
 
 
     useEffect(() => {
         Aos.init({ duration: 2000 })
     }, [])
 
+    if (isPending) {
+        return <span className="loading loading-bars loading-lg mt-96 ml-[56rem]"></span>
+    }
+
+    if (isError) {
+        return <p>{error.message}</p>
+    }
 
     return (
         <>
-        <audio loop="1" autoPlay>
-            <source src='./firstAudio.mp3'></source>
-        </audio>
+            <audio loop="1" autoPlay>
+                <source src='./firstAudio.mp3'></source>
+            </audio>
             {/* <PageTitle title="Panel Member"/> */}
-            <img className=" mt-10 w-full" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Panel%20Member&section=header&reversal=false&fontAlignY=50&animation=twinkling&strokeWidth=0&fontSize=33" />
+            <img className=" mt-10 w-full" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Executive%20Panel%20 23-24&section=header&reversal=false&fontAlignY=50&animation=twinkling&strokeWidth=0&fontSize=33" />
 
 
 
