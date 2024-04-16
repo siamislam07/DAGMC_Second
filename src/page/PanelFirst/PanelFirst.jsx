@@ -17,7 +17,7 @@ const PanelFirst = () => {
     // useEffect(() => {
     //     const fetchImages = async () => {
     //         try {
-    //             const response = await fetch('http://localhost:3000/panelFirst');
+    //             const response = await fetch('https://dagmc-club-server-9iaeojnn7-siams-projects-18d0f3fe.vercel.app/panelFirst');
     //             const data = await response.json();
     //             setInfo(data);
     //         } catch (error) {
@@ -31,7 +31,7 @@ const PanelFirst = () => {
     const { isPending, data: info, isError, error } = useQuery({
         queryKey: ['panelFirst'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:3000/panelFirst')
+            const res = await fetch('https://dagmc-club-server.vercel.app/panelFirst')
             return res.json()
         }
     })

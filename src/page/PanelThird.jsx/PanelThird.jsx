@@ -17,7 +17,7 @@ const PanelThird = () => {
     // useEffect(() => {
     //     const fetchPanelThirdData = async () => {
     //         try {
-    //             const response = await fetch('http://localhost:3000/panelThird'); // Make a GET request to your server's endpoint
+    //             const response = await fetch('https://dagmc-club-server-9iaeojnn7-siams-projects-18d0f3fe.vercel.app/panelThird'); // Make a GET request to your server's endpoint
     //             const data = await response.json();
     //             setInfo(data);
     //         } catch (error) {
@@ -35,7 +35,7 @@ const PanelThird = () => {
     const { isPending, data: info, isError, error } = useQuery({
         queryKey: ['panelThird'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:3000/panelThird')
+            const res = await fetch('https://dagmc-club-server.vercel.app/panelThird')
             return res.json()
         }
     })

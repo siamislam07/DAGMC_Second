@@ -100,7 +100,7 @@ function DropzoneComponent(props) {
         console.log('dara',imageData[0]);
 
         const img = imageData[0]
-        axios.post('http://localhost:3000/gallery', img)
+        axios.post('https://dagmc-club-server.vercel.app/gallery', img)
             .then(res => {
                 console.log('Response from backend:', res.data);
                 if (res.data.insertedCount > 0) {

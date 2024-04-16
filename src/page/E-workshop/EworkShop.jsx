@@ -7,6 +7,11 @@ const EworkShop = () => {
         setCurrentVideo(videoUrl);
     };
 
+    // Function to construct the thumbnail URL from video ID
+    const getThumbnailUrl = (videoId) => {
+        return `https://img.youtube.com/vi/${videoId}/default.jpg`;
+    };
+
     return (
         <div className="glass py-14">
             <div className="max-w-4xl mx-auto px-4">
@@ -36,11 +41,10 @@ const EworkShop = () => {
                     <h3 className="text-2xl font-bold mb-4">Related Videos</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {/* Example related video cards */}
-                    
                         <div className="bg-gray-800 rounded-lg shadow-md p-4" onClick={() => handleVideoClick("https://www.youtube.com/embed/_44DUadtPjo")}>
                             <img
                                 className="w-full h-32 object-cover rounded-lg mb-4 cursor-pointer"
-                                src="https://www.youtube.com/embed/_44DUadtPjo"
+                                src={getThumbnailUrl("_44DUadtPjo")}
                                 alt="Related Video"
                             />
                             <h4 className="text-lg font-semibold mb-2">Related Video Title 1</h4>
@@ -49,10 +53,10 @@ const EworkShop = () => {
                             </p>
                         </div>
                         {/* Add more related video cards here */}
-                        <div className="bg-gray-800 rounded-lg shadow-md p-4" onClick={() => handleVideoClick("https://youtu.be/_Z9TvCjDnAk")}>
+                        <div className="bg-gray-800 rounded-lg shadow-md p-4" onClick={() => handleVideoClick("https://www.youtube.com/embed/_Z9TvCjDnAk")}>
                             <img
                                 className="w-full h-32 object-cover rounded-lg mb-4 cursor-pointer"
-                                src="https://via.placeholder.com/300x200"
+                                src={getThumbnailUrl("_Z9TvCjDnAk")}
                                 alt="Related Video"
                             />
                             <h4 className="text-lg font-semibold mb-2">Related Video Title 2</h4>
