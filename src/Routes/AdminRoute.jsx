@@ -12,8 +12,8 @@ const AdminRoute = ({ children }) => {
         return <span className="loading loading-bars loading-lg mt-96 ml-[56rem]"></span>
     }
 
-    if (!user?.email === 'admin@admin.com') {
-        return <Navigate state={location.pathname} to='/'> {toast.error("Admins only! Redirecting home. No VIP pass, no entry. 🏠😄 ")}</Navigate>
+    if (user?.email === 'admin@admin.com') {
+        return children
     }
 
     // if (user) {

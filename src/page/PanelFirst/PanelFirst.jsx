@@ -5,11 +5,13 @@ import fb from '../../image/icons/facebook1.png';
 import gmail from '../../image/icons/gmail.png'
 // import wp from '../../image/icons/whatsapp.png'
 import Aos from 'aos';
-import {   useQuery } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
+import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 // import { useQueries } from '@tanstack/react-query';
 
 
 const PanelFirst = () => {
+    const [mute, setUnmute] = useState(false)
     // const [info, setInfo] = useState()
 
     // useEffect(() => {
@@ -44,14 +46,34 @@ const PanelFirst = () => {
     }
 
     if (isError) {
+        if (error.message === "Failed to fetch") {
+            return <p className="text-center">Server is busy Please try again later. Thank you</p>
+        }
+        // console.log(error);
         return <p>{error.message}</p>
     }
+    
+
+    const toggleMute = () => {
+        const audio = document.getElementById("firstAudio");
+        if (audio) {
+            if (mute) {
+                audio.volume = 0.3; // Set volume to full when unmuting
+            } else {
+                audio.volume = 0.3; // Set volume to half when muting
+            }
+        }
+        setUnmute(!mute);
+    };
 
     return (
         <>
-            <audio loop="1" autoPlay>
-                <source src='./firstAudio.mp3'></source>
+            <audio id="firstAudio" loop autoPlay muted={mute} >
+                <source src="./firstAudio.mp3" />
             </audio>
+            <button onClick={toggleMute} className="fixed z-10 left-5 md:left-3  top-[550px] md:top-[890px] btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none">
+                {mute ? <FaVolumeMute /> : <FaVolumeUp />}
+            </button>
             {/* <PageTitle title="Panel Member"/> */}
             <img className=" mt-10 w-full" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Executive%20Panel%20 23-24&section=header&reversal=false&fontAlignY=50&animation=twinkling&strokeWidth=0&fontSize=33" />
 

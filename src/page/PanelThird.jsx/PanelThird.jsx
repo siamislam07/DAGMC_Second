@@ -50,6 +50,10 @@ const PanelThird = () => {
     }
 
     if (isError) {
+        if (error.message === "Failed to fetch") {
+            return <p className="text-center">Server is busy Please try again later. Thank you</p>
+        }
+        // console.log(error);
         return <p>{error.message}</p>
     }
 

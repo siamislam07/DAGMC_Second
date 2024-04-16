@@ -9,23 +9,23 @@ import SparkContainer from "@kamiru/react-spark";
 
 const Main = () => {
     const [loading, setLoading] = useState(false)
-    const [isMuted, setIsMuted] = useState(false);
+    // const [isMuted, setIsMuted] = useState(false);
     useEffect(() => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
         }, 2000)
     }, [])
-    const toggleMute = () => {
-        setIsMuted(prevState => !prevState);
-    };
+    // const toggleMute = () => {
+    //     setIsMuted(prevState => !prevState);
+    // };
 
     return (
         <>
             <SparkContainer randomnessOn={true} className=" ">
 
                 {loading ? <Loader /> : <>
-                    <Navbar isMuted={isMuted} toggleMute={toggleMute}/>
+                    <Navbar />
 
                     <div className="min-h-[calc(100vh-68px)]">
                         

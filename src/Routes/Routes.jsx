@@ -18,6 +18,7 @@ import Dashboard from "../Layout/Dashboard";
 import Profile from "../page/Dashboard/Profile/Profile";
 import UploadImage from "../page/UploadImage/UploadImage";
 import AdminRoute from "./AdminRoute";
+import EworkShop from "../page/E-workshop/EworkShop";
 // import Profile from "../page/Profile/Profile";
 
 const router = createBrowserRouter([
@@ -67,16 +68,20 @@ const router = createBrowserRouter([
                 path: '/aboutUs',
                 element: <AboutUs />
             },
+            {
+                path:'/e-workshop',
+                element:<EworkShop/>
+            }
         ]
     },
 
     {
         path: 'dashboard',
-        element: <Dashboard />,
+        element: <PrivateRoute><Dashboard /></PrivateRoute>,
         children: [
             {
                 path: "profile",
-                element: <Profile />,
+                element: <PrivateRoute><Profile /></PrivateRoute>,
             },
             {
                 path: "uploadImage",

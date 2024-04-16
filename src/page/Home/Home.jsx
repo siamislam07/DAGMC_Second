@@ -12,24 +12,34 @@ import Email from "../Email/Email";
 
 
 const Home = () => {
-    const [mute, setUnmute] = useState(false)
+    // const [mute, setUnmute] = useState(false)
 
-    const toggleMute = () => {
-        setUnmute(!mute);
-    };
+    // const toggleMute = () => {
+    //     const audio = document.getElementById("homeAudio");
+    //     if (audio) {
+    //         if (mute) {
+    //             audio.volume = 1; // Set volume to full when unmuting
+    //         } else {
+    //             audio.volume = 0.4; // Set volume to half when muting
+    //         }
+    //     }
+    //     setUnmute(!mute);
+    // };
+
 
     // const homePageMusic = './homeAudio.mp3'
     return (
         <>
 
 
-            <audio loop autoPlay muted={!mute}>
+            {/* <audio id="homeAudio" loop autoPlay muted={!mute} >
                 <source src="./homeAudio.mp3" />
-            </audio>
+            </audio> */}
 
-            <button onClick={toggleMute} className="fixed z-10 left-5 md:left-3  top-[550px] md:top-[890px] btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none">
+
+            {/* <button onClick={toggleMute} className="fixed z-10 left-5 md:left-3  top-[550px] md:top-[890px] btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none">
                 {mute ? <FaVolumeUp /> : <FaVolumeMute />}
-            </button>
+            </button> */}
 
 
             <PageTitle title="Home" />
