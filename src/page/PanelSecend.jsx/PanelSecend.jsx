@@ -4,34 +4,33 @@ import fb from '../../image/icons/facebook1.png';
 import gmail from '../../image/icons/gmail.png'
 import Aos from 'aos';
 import { useQuery } from '@tanstack/react-query';
+import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 // import wp from '../../image/icons/whatsapp.png'
 
 
 
 
 const PanelSecend = () => {
+    const [mute, setUnmute] = useState(false)
 
+    const toggleMute = () => {
+        const audio = document.getElementById("homeAudio");
+        if (audio) {
+            if (mute) {
+                audio.volume = 0.3; // Set volume to full when unmuting
+            } else {
+                audio.volume = 0.3; // Set volume to half when muting
+            }
+        }
+        setUnmute(!mute);
+    };
 
-    // const [info, setInfo] = useState()
-
-    // useEffect(() => {
-    //     const fetchImages = async () => {
-    //         try {
-    //             const response = await fetch('/PanelSecend.json');
-    //             const data = await response.json();
-    //             setInfo(data);
-    //         } catch (error) {
-    //             console.error('Error fetching images:', error);
-    //         }
-    //     };
-
-    //     fetchImages();
-    // }, []);
 
     const { isPending, data: info, isError, error } = useQuery({
         queryKey: ['panelSecond'],
         queryFn: async () => {
-            const res = await fetch('https://dagmc-club-server.vercel.app/panelSecond')
+            // const res = await fetch('https://dagmc-club-server.vercel.app/panelSecond')
+            const res = await fetch('http://localhost:3000/panelSecond')
             return res.json()
         }
     })
@@ -39,8 +38,13 @@ const PanelSecend = () => {
 
     useEffect(() => {
         Aos.init({ duration: 2000 })
+
+        const audio = document.getElementById("homeAudio");
+        if (audio) {
+            audio.play();
+        }
     }, [])
-    
+
     if (isPending) {
         return <span className="loading loading-bars loading-lg mt-96 ml-[56rem]"></span>
     }
@@ -52,10 +56,17 @@ const PanelSecend = () => {
         // console.log(error);
         return <p>{error.message}</p>
     }
+
+
     return (
 
         <>
-
+            <audio id="firstAudio" loop autoPlay muted={mute} >
+                <source src="./otherpages2.mp3" />
+            </audio>
+            <button onClick={toggleMute} className="fixed z-10 left-5 md:left-3  top-[550px] md:top-[890px] btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none">
+                {mute ? <FaVolumeMute /> : <FaVolumeUp />}
+            </button>
             <img className=" mt-10 w-full" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Executive%20Panel%20 22-23&section=header&reversal=false&fontAlignY=50&animation=twinkling&strokeWidth=0&fontSize=33" />
             <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12 mb-24">
 

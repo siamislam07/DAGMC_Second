@@ -20,26 +20,12 @@ const Gallery = () => {
         }
         setUnmute(!mute);
     };
-    // const [images, setImages] = useState()
-
-    // useEffect(() => {
-    //     const fetchImages = async () => {
-    //         try {
-    //             const response = await fetch('/gallery.json');
-    //             const data = await response.json();
-    //             setImages(data);
-    //         } catch (error) {
-    //             console.error('Error fetching images:', error);
-    //         }
-    //     };
-
-    //     fetchImages();
-    // }, []);
 
     const { isPending, data: images, isError, error } = useQuery({
         queryKey: ['panelFirst'],
         queryFn: async () => {
-            const res = await fetch('https://dagmc-club-server.vercel.app/gallery')
+            // const res = await fetch('https://dagmc-club-server.vercel.app/gallery')
+            const res = await fetch('http://localhost:3000/gallery')
             return res.json()
         }
     })

@@ -70,7 +70,7 @@ function DropzoneComponent(props) {
         </div>
     ));
 
-    // clean up
+    
     useEffect(() => () => {
         files.forEach(file => URL.revokeObjectURL(file.preview));
     }, [files]);

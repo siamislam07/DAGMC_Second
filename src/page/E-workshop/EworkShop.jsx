@@ -29,10 +29,9 @@ const EworkShop = () => {
 
                 {/* Text Content */}
                 <div className="mb-8 text-gray-200">
-                    <h2 className="text-3xl font-bold mb-4">E-Workshop Title</h2>
+                    <h2 className="text-3xl font-bold mb-4">What is Debating?</h2>
                     <p className="text-lg">
-                        This is some text describing the e-workshop. You can provide information about what participants
-                        will learn, who will be speaking, and any other relevant details.
+                    Unlocking the Power of Debate: A Comprehensive Guide to Constructing Arguments, Engaging with Opposing Views, and Cultivating Critical Thinking Skills
                     </p>
                 </div>
 
@@ -47,7 +46,7 @@ const EworkShop = () => {
                                 src={getThumbnailUrl("_44DUadtPjo")}
                                 alt="Related Video"
                             />
-                            <h4 className="text-lg font-semibold mb-2">Related Video Title 1</h4>
+                            <h4 className="text-lg font-semibold mb-2">Part 02</h4>
                             <p className="text-sm">
                                 Short description of the related video content.
                             </p>
@@ -59,7 +58,7 @@ const EworkShop = () => {
                                 src={getThumbnailUrl("_Z9TvCjDnAk")}
                                 alt="Related Video"
                             />
-                            <h4 className="text-lg font-semibold mb-2">Related Video Title 2</h4>
+                            <h4 className="text-lg font-semibold mb-2">Part 03</h4>
                             <p className="text-sm">
                                 Short description of the related video content.
                             </p>
