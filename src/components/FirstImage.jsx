@@ -11,19 +11,7 @@ import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 // import CubePagination from "./CubePagination";
 
 const FirstImage = () => {
-  const [mute, setUnmute] = useState(false)
-
-  const toggleMute = () => {
-    const audio = document.getElementById("homeAudio");
-    if (audio) {
-      if (mute) {
-        audio.volume = 1; 
-      } else {
-        audio.volume = 0.4; 
-      }
-    }
-    setUnmute(!mute);
-  };
+  
   const { user, logOut } = useContext(AuthContext)
 
   const handleLogOut = () => {
@@ -37,10 +25,7 @@ const FirstImage = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 })
 
-    const audio = document.getElementById("homeAudio");
-    if (audio) {
-      audio.play();
-    }
+   
   }, [])
   const [text] = useTypewriter({
     words: ['Welcome To Our Club',],
@@ -51,12 +36,7 @@ const FirstImage = () => {
 
     <>
 
-      <audio id="homeAudio" loop autoPlay muted={mute} >
-        <source src="./holePage.mp3" />
-      </audio>
-      <button onClick={toggleMute} className="fixed z-10 left-5 md:left-3  top-[550px] md:top-[890px] btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none">
-        {mute ? <FaVolumeMute /> : <FaVolumeUp />}
-      </button>
+      
       <div className="relative mx-auto">
 
         <div className="hero transition-colors before:absolute before:-z-10 before:h-full text-white before:w-full before:origin-top-left  before:scale-x-0 before:bg-gradient-to-r from-violet-600 to-indigo-600 before:transition-transform before:duration-500 hover:text-black  before:hover:scale-x-100 ">

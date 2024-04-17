@@ -1,8 +1,9 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import club_logho from '../../image/DAGMC.png'
 import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import NavBarProfile from "../../components/NavBarProfile";
+import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 // import MuteToggle from "../../components/MuteToggle";
 
 // import { Link as Go, animateScroll as scroll } from "react-scroll";
@@ -31,42 +32,26 @@ const Navbar = () => {
         localStorage.setItem("theme", theme)
         const localTheme = localStorage.getItem("theme");
         document.querySelector("html").setAttribute("data-theme", localTheme)
+
     }, [theme])
     //darkMode functions ends here
 
-    // const scrollToAbout = () => {
-    //     animateScroll.scrollTo("aboutUs", {
-    //         duration: 1000,
-    //         smooth: "easeInOutQuart",
-    //     });
-    // }; 
+    useEffect(() => {
 
-    // const [isPlaying, setIsPlaying] = useState(false);
-    // const [isMuted, setIsMuted] = useState(false);
-    // const audioRef = useRef(null);
+        const audioElement = document.getElementById('backgroundMusic');
 
-    // const togglePlay = () => {
-    //     const audio = audioRef.current;
-    //     if (isPlaying) {
-    //         audio.pause();
-    //     } else {
-    //         audio.play();
-    //     }
-    //     setIsPlaying(!isPlaying);
-    // };
 
-    // const toggleMute = () => {
-    //     const audio = audioRef.current;
-    //     audio.muted = !isMuted;
-    //     setIsMuted(!isMuted);
-    //     // If the audio is currently paused, start playing it when muting
-    //     if (!isMuted && !isPlaying) {
-    //         audio.play();
-    //         setIsPlaying(true);
-    //     }
-    // };
+        audioElement.play();
 
-    
+
+        // return () => {
+        //     audioElement.pause();
+
+        //     audioElement.currentTime = 0;
+        // };
+    }, []);
+
+
 
     const navLinks = <>
         <label className="swap swap-rotate">
@@ -119,56 +104,56 @@ const Navbar = () => {
             </ul>
         </details>
 
-        {/* <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn m-1">PanelMember</div>
-            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-            <li><a>Member 01</a></li>
-            <li><a>Member 02</a></li>
-            </ul>
-        </div> */}
-
-        {/* <li>
-            <NavLink to="/panel-member" className=" btn-outline btn-default border-b-lime-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn ">Panel Member</NavLink>
-        </li>
-
-
-        <li>
-            <NavLink to='/panel-member1' className=" btn-outline btn-default border-b-lime-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn ">Exicutive pannel <br /> 2023-2024</NavLink></li>
-        <li>
-        <NavLink to='/panel-member2' className=" btn-outline btn-default border-b-lime-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn ">Exicutive pannel <br /> 2022-2023</NavLink></li>
-        
-        <li>
-        
-        <NavLink to='/panel-member3' className=" btn-outline btn-default border-b-lime-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn ">Exicutive pannel <br /> 2021-2022</NavLink>
-        </li> */}
-
-
-
-
-
-
         <li><NavLink to='/gallery' className="btn btn-outline btn-default    border-b-amber-600 border-neutral normal-case text-lg  transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none  hover:bg-[#00f7ff] hover:border-none">Gallery </NavLink></li>
         <li><NavLink to='/e-workshop' className="btn btn-outline btn-default    border-b-amber-300 border-neutral normal-case text-lg  transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none">E- WorkShop</NavLink></li>
 
-
         <NavBarProfile />
-
-       
 
 
     </>
+    // const [mute, setMute] = useState(false);
+    const location = useLocation()
+    const [isPlaying, setIsPlaying] = useState(true);
+    const noGalleryWork = location.pathname.includes('gallery') || location.pathname.includes('e-workshop')
+
+    const audio = document.getElementById('backgroundMusic');
+    const togglePlay = () => {
+        if (audio) {
+            if (isPlaying) {
+                audio.pause();
+            }
+            else {
+                audio.play();
+            }
+            setIsPlaying(!isPlaying);
+        }
+
+    };
+
 
     return (
         <div className=" w-full  navbar  shadow-2xl mb-12 ">
             <div className="w-full max-w-[1600px] mx-auto     xl:px-30 md:px-10 sm:px-2 px-4">
+                {
+                    noGalleryWork || <>
+                        <audio id='backgroundMusic' autoPlay >
+                            <source src="./holePage.mp3" type="audio/mpeg" />
+                        </audio>
+                        <button
+                            className="fixed z-10 left-5 md:left-3 top-[550px] md:top-[890px] btn btn-outline btn-default border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none"
+                            onClick={togglePlay}
+                        >
+                            {isPlaying ? <FaVolumeUp /> : <FaVolumeMute />}
+                        </button></>
 
+                }
                 <div className="navbar-start flex items-center ">
                     <div className="dropdown lg:hidden md:hidden">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 gap-3 shadow bg-base-100 rounded-box w-52">
-                        {/* <NavBarProfile /> */}
+                            {/* <NavBarProfile /> */}
                             {navLinks}
 
                         </ul>

@@ -8,36 +8,18 @@ import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 // define "lord-icon" custom element with default properties
 defineElement(lottie.loadAnimation);
 const AboutUs = () => {
-  const [mute, setUnmute] = useState(false)
+  
 
-  const toggleMute = () => {
-    const audio = document.getElementById("homeAudio");
-    if (audio) {
-      if (mute) {
-        audio.volume = 0.3; // Set volume to full when unmuting
-      } else {
-        audio.volume = 0.3; // Set volume to half when muting
-      }
-    }
-    setUnmute(!mute);
-  };
+  
   useEffect(() => {
     Aos.init({ duration: 3000 })
-    const audio = document.getElementById("homeAudio");
-    if (audio) {
-      audio.play();
-    }
+   
   }, [])
   return (
 
     <div className="max-w-[1200px] p-3  mx-auto mb-10 overflow-hidden">
       <PageTitle title="About" />
-      <audio id="firstAudio" loop autoPlay muted={mute} >
-        <source src="./otherPages.mp3" />
-      </audio>
-      <button onClick={toggleMute} className="fixed z-10 left-5 md:left-3  top-[550px] md:top-[890px] btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none">
-        {mute ? <FaVolumeMute /> : <FaVolumeUp />}
-      </button>
+      
       <div data-aos="fade-down" className="card overflow-hidden card-body card-compact caret-red-700  text-2xl  text-center   w-full   font-bold bg-[#00f7ff] shadow-2xl shadow-[#00f7ff] relative border-2 rounded-lg bg-transparent py-2.5 px-5  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full text-[#00f7ff] before:w-full before:origin-top-left before:scale-y-0 before:bg-[#00f7ff] before:transition-transform border-[#00f7ff]">
         <h3 className="font-bold text-red-500 text-4xl mb-2">
           About Our Debating Club
@@ -90,14 +72,14 @@ const AboutUs = () => {
         <div data-aos="fade-left" className="card overflow-hidden card-body w-full card-compact caret-red-700  text-2xl text-center    mx-auto  p-3  font-bold bg-[#00f7ff] shadow-2xl shadow-[#00f7ff]  border-2 rounded-lg bg-transparent py-2.5 px-5  transition-colors before:absolute before:left-0 before:top-0 before:-z-10  text-[#00f7ff]  before:bg-[#00f7ff] before:transition-transform border-[#00f7ff] ">
           <h3 className="font-bold text-red-500 text-4xl mb-2">
             <div className="flex items-center justify-center flex-col">
-              <img width="76" height="96" src="https://i.ibb.co/bRJ5B1M/icons8-call-65.pngin ta" alt="address" />
+            <img width="76" height="76" src="https://img.icons8.com/fluency/48/000000/secured-letter.png" alt="secured-letter"/>
               <span>
                 Contact
               </span>
             </div>
           </h3>
           <p>
-            ++8801934153133
+          jihanuddink2005@gmail.com
           </p>
         </div>
       </div>
