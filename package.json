@@ -12,7 +12,9 @@
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@kamiru/react-spark": "^6.0.0",
+    "@tanstack/react-query": "^5.29.2",
     "aos": "^2.3.4",
+    "axios": "^1.6.8",
     "firebase": "^10.9.0",
     "localforage": "^1.10.0",
     "lord-icon-element": "^4.1.2",
@@ -21,6 +23,7 @@
     "messaging-api-messenger": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-dropzone": "^11.2.4",
     "react-helmet": "^6.1.0",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^5.0.1",

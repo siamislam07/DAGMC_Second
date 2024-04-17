@@ -115,7 +115,7 @@ const Login = () => {
                             <hr className="border-gray-500" />
                         </div>
 
-                        <button onClick={handleGoogleLogIn} className="bg-white mb-5 shadow-lg hover:scale-105 duration-300 border bg-gradient-to-r from-purple-300 to-indigo-400  w-full rounded-xl mt-5 flex justify-center items-center text-sm">
+                        <button onClick={handleGoogleLogIn} className="bg-white text-white mb-5 shadow-lg hover:scale-105 duration-300 border bg-gradient-to-r from-purple-300 to-indigo-400  w-full rounded-xl mt-5 flex justify-center items-center text-sm">
                             {/* <span className="">{Views}</span>  */}
                             <img className="w-10 " src={googles} alt="" />
                             Continue With Google</button>

@@ -1,19 +1,19 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import UserTabs from "../../components/UserTabs";
+// import UserTabs from "../../components/UserTabs";
 
 const Profile = () => {
+
     const { user } = useContext(AuthContext)
     const [userName, setUserName] = useState(user?.displayName)
-    const [image, setImage] = useState('')
-    const [phone, setPhone] = useState('')
-    const [streetAddress, setStreetAddress] = useState('')
-    const [postalCode, setPostalCode] = useState('')
-    const [city, setCity] = useState('')
-    const [country, setCountry] = useState('')
+
 
     const handleProfileUpdate = (e) => {
         e.preventDefault()
     }
+
+    // const isAdmin = true
 
     return (
         <section className="mt-24">
@@ -22,15 +22,15 @@ const Profile = () => {
             <div className="max-w-xl mx-auto mt-8" >
 
 
-                <div className="flex gap-4 items-center">
+                <div className="flex md:flex-col lg:flex-row  gap-4 items-center">
                     <div>
                         <div className=" p-2 rounded-xl relative  max-w-[120px]">
                             <img className="rounded-lg w-full h-full mb-1" src={user?.photoURL ? user.photoURL : 'https://i.ibb.co/wC75hKV/user.png'} />
                             {/* <EditAbleImage link={image} setLink={setImage} /> */}
-                            <label >
+                            {/* <label >
                                 <input type="file" accept="image/*" onChange={'handleFileChange'} className="hidden" />
                                 <span className="border border-gray-300 cursor-pointer rounded-lg p-2 text-center block ">Edit</span>
-                            </label>
+                            </label> */}
 
                         </div>
                     </div>

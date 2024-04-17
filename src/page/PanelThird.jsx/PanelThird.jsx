@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import fb from '../../image/icons/facebook1.png';
 import gmail from '../../image/icons/gmail.png'
 import Aos from 'aos';
+import { useQuery } from '@tanstack/react-query';
 // import wp from '../../image/icons/whatsapp.png'
 
 
@@ -11,32 +12,56 @@ import Aos from 'aos';
 
 const PanelThird = () => {
 
+    // const [info, setInfo] = useState()
 
-    const [info, setInfo] = useState()
+    // useEffect(() => {
+    //     const fetchPanelThirdData = async () => {
+    //         try {
+    //             const response = await fetch('http://localhost:3000/panelThird'); // Make a GET request to your server's endpoint
+    //             const data = await response.json();
+    //             setInfo(data);
+    //         } catch (error) {
+    //             console.error('Error fetching panelThird data:', error);
+    //         }
+    //     };
 
-    useEffect(() => {
-        const fetchImages = async () => {
-            try {
-                const response = await fetch('/PanelThird.json');
-                const data = await response.json();
-                setInfo(data);
-            } catch (error) {
-                console.error('Error fetching images:', error);
-            }
-        };
+    //     fetchPanelThirdData();
 
-        fetchImages();
-    }, []);
+    // }, [])
+
+
+    
+
+    const { isPending, data: info, isError, error } = useQuery({
+        queryKey: ['panelThird'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:3000/panelThird')
+            return res.json()
+        }
+    })
+
+
     useEffect(() => {
         Aos.init({ duration: 2000 })
     }, [])
+    
+    if (isPending) {
+        return <span className="loading loading-bars loading-lg mt-96 ml-[56rem]"></span>
+    }
 
+    if (isError) {
+        if (error.message === "Failed to fetch") {
+            return <p className="text-center">Server is busy Please try again later. Thank you</p>
+        }
+        // console.log(error);
+        return <p>{error.message}</p>
+    }
 
     return (
 
         <>
 
-            <img className=" mt-10 w-full" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Panel%20Member&section=header&reversal=false&fontAlignY=50&animation=twinkling&strokeWidth=0&fontSize=33" />
+            <img className=" mt-10 w-full" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Executive%20Panel%20 21-22&section=header&reversal=false&fontAlignY=50&animation=twinkling&strokeWidth=0&fontSize=33" />
             <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12 mb-24">
 
 
@@ -66,7 +91,7 @@ const PanelThird = () => {
                                     </a>
                                 </div>
                                 <div className="w-8 ml-4 rounded-full    ring-offset-2">
-                                    <a href={item?.gmail} target="_blank" rel="noopener noreferrer">
+                                    <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(item?.gmail)}`} target="_blank" rel="noopener noreferrer">
                                         <img src={gmail} alt="Facebook" className='cursor-pointer' />
                                     </a>
                                 </div>

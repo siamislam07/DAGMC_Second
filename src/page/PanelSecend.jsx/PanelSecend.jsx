@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 // import img from '../../image/homeimage2.png';
 import fb from '../../image/icons/facebook1.png';
 import gmail from '../../image/icons/gmail.png'
+import Aos from 'aos';
+import { useQuery } from '@tanstack/react-query';
 // import wp from '../../image/icons/whatsapp.png'
 
 
@@ -10,27 +12,51 @@ import gmail from '../../image/icons/gmail.png'
 const PanelSecend = () => {
 
 
-    const [info, setInfo] = useState()
+    // const [info, setInfo] = useState()
+
+    // useEffect(() => {
+    //     const fetchImages = async () => {
+    //         try {
+    //             const response = await fetch('/PanelSecend.json');
+    //             const data = await response.json();
+    //             setInfo(data);
+    //         } catch (error) {
+    //             console.error('Error fetching images:', error);
+    //         }
+    //     };
+
+    //     fetchImages();
+    // }, []);
+
+    const { isPending, data: info, isError, error } = useQuery({
+        queryKey: ['panelSecond'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:3000/panelSecond')
+            return res.json()
+        }
+    })
+
 
     useEffect(() => {
-        const fetchImages = async () => {
-            try {
-                const response = await fetch('/PanelSecend.json');
-                const data = await response.json();
-                setInfo(data);
-            } catch (error) {
-                console.error('Error fetching images:', error);
-            }
-        };
+        Aos.init({ duration: 2000 })
+    }, [])
+    
+    if (isPending) {
+        return <span className="loading loading-bars loading-lg mt-96 ml-[56rem]"></span>
+    }
 
-        fetchImages();
-    }, []);
-
+    if (isError) {
+        if (error.message === "Failed to fetch") {
+            return <p className="text-center">Server is busy Please try again later. Thank you</p>
+        }
+        // console.log(error);
+        return <p>{error.message}</p>
+    }
     return (
 
         <>
 
-            <img className=" mt-10 w-full" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Panel%20Member&section=header&reversal=false&fontAlignY=50&animation=twinkling&strokeWidth=0&fontSize=33" />
+            <img className=" mt-10 w-full" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Executive%20Panel%20 22-23&section=header&reversal=false&fontAlignY=50&animation=twinkling&strokeWidth=0&fontSize=33" />
             <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12 mb-24">
 
 
@@ -60,8 +86,8 @@ const PanelSecend = () => {
                                     </a>
                                 </div>
                                 <div className="w-8 ml-4 rounded-full    ring-offset-2">
-                                    <a href={item?.gmail} target="_blank" rel="noopener noreferrer">
-                                        <img src={gmail} alt="Facebook" className='cursor-pointer' />
+                                    <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(item?.gmail)}`} target="_blank" rel="noopener noreferrer">
+                                        <img src={gmail} alt="Gmail" className='cursor-pointer' />
                                     </a>
                                 </div>
                                 {/* <div className="w-8 ml-4 rounded-full    ring-offset-2">
