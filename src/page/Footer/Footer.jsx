@@ -1,6 +1,27 @@
+import { useEffect, useState } from "react";
 import Center from "../../utilits/Center";
 // import MessengerCustomerChat from 'react-messenger-customer-chat';
 const Footer = () => {
+
+  const [backToTop, setBackToTopButton] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 3000) {
+        setBackToTopButton(true)
+      }
+      else {
+        setBackToTopButton(false)
+      }
+    })
+  }, [])
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
   return (
     <>
 
@@ -24,6 +45,9 @@ const Footer = () => {
             </nav>
           </footer>
         </Center>
+        {backToTop && (
+          <button onClick={scrollUp} className="fixed scroll-smooth bottom-12 right-24 btn btn-outline btn-default pt-2  border-[#00f7ff] normal-case text-lg  hover:text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:border-[#00f7ff] hover:bg-transparent">△</button>
+        )}
         {/* <MessengerCustomerChat
         pageId="268524179676667"
         appId="1112761916427890"
