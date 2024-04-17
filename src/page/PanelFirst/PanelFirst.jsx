@@ -17,7 +17,7 @@ const PanelFirst = () => {
     // useEffect(() => {
     //     const fetchImages = async () => {
     //         try {
-    //             const response = await fetch('http://localhost:3000/panelFirst');
+    //             const response = await fetch('https://dagmc-club-server-9iaeojnn7-siams-projects-18d0f3fe.vercel.app/panelFirst');
     //             const data = await response.json();
     //             setInfo(data);
     //         } catch (error) {
@@ -31,7 +31,8 @@ const PanelFirst = () => {
     const { isPending, data: info, isError, error } = useQuery({
         queryKey: ['panelFirst'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:3000/panelFirst')
+            const res = await fetch('https://dagmc-club-server.vercel.app/panelFirst')
+            // const res = await fetch('http://localhost:3000/panelFirst')
             return res.json()
         }
     })
@@ -52,7 +53,7 @@ const PanelFirst = () => {
         // console.log(error);
         return <p>{error.message}</p>
     }
-    
+
 
     const toggleMute = () => {
         const audio = document.getElementById("firstAudio");
@@ -64,12 +65,13 @@ const PanelFirst = () => {
             }
         }
         setUnmute(!mute);
+        
     };
 
     return (
         <>
             <audio id="firstAudio" loop autoPlay muted={mute} >
-                <source src="./firstAudio.mp3" />
+                <source src="./otherPages.mp3" />
             </audio>
             <button onClick={toggleMute} className="fixed z-10 left-5 md:left-3  top-[550px] md:top-[890px] btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none">
                 {mute ? <FaVolumeMute /> : <FaVolumeUp />}
@@ -86,9 +88,10 @@ const PanelFirst = () => {
 
                     <div data-aos="fade-up"
                         data-aos-easing="linear"
-                        data-aos-duration="1600" key={i} className='col-span-1 mx-auto group mb-20 overflow-hidden shadow-2xl shadow-[#00f7ff] border-[#00f7ff]'>
-                        <div className='flex  mx-auto flex-col gap-2 w-80 border border-[#00f7ff] shadow-2xl shadow-[#00f7ff]  rounded-2xl'>
-                            <div className='aspect-square w-full relative overflow-hidden rounded-xl'>
+                        data-aos-duration="1600" key={i}
+                        className='col-span-1 mx-auto group mb-20 overflow-hidden shadow-2xl shadow-[#00f7ff] rounded-2xl border-[#00f7ff]'>
+                        <div className='flex h-full  mx-auto flex-col gap-2 w-80 border border-[#00f7ff]  shadow-[#00f7ff]  rounded-2xl'>
+                            <div className='aspect-square w-full  relative overflow-hidden rounded-xl'>
                                 <img className='object-cover  h-80 p-3 w-full group-hover:scale-110 transition shadow-2xl shadow-[#00f7ff] border-[#00f7ff]'
                                     src={item?.pic}
                                     alt='Room' />

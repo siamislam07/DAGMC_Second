@@ -17,9 +17,9 @@ const FirstImage = () => {
     const audio = document.getElementById("homeAudio");
     if (audio) {
       if (mute) {
-        audio.volume = 0.3; // Set volume to full when unmuting
+        audio.volume = 1; 
       } else {
-        audio.volume = 0.3; // Set volume to half when muting
+        audio.volume = 0.4; 
       }
     }
     setUnmute(!mute);
@@ -52,7 +52,7 @@ const FirstImage = () => {
     <>
 
       <audio id="homeAudio" loop autoPlay muted={mute} >
-        <source src="./homeAudio.mp3" />
+        <source src="./holePage.mp3" />
       </audio>
       <button onClick={toggleMute} className="fixed z-10 left-5 md:left-3  top-[550px] md:top-[890px] btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none">
         {mute ? <FaVolumeMute /> : <FaVolumeUp />}

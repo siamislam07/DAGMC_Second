@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 
 import './styles.css';
 
-// import required modules
+
 import { EffectCube, Pagination, Autoplay } from 'swiper/modules';
 
 const CubePagination = () => {
@@ -24,15 +24,14 @@ const CubePagination = () => {
                     shadowOffset: 20,
                     shadowScale: 0.94,
                 }}
-                // pagination={true}
+              
                 modules={[EffectCube, Pagination, Autoplay]}
                 className="mySwiper "
-                // loop={true} // Make it an infinite loop
-                // autoplay={{ delay: 2000 }}
+               
                 autoplay={{
                     delay: 2700,
                     disableOnInteraction: false,
-                  }}// Autoplay with a delay of 3000ms (3 seconds)
+                  }}/
                 
             >
 

@@ -50,7 +50,6 @@ const Home = () => {
             <About />
             <Email />
 
-
             <panelImage />
 
         </>

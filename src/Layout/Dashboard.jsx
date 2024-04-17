@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import ClickSound from "../components/ClickSound";
+import SparkContainer from "@kamiru/react-spark";
 
 const Dashboard = () => {
     const [admin, setAdmin] = useState(false)
@@ -20,30 +22,36 @@ const Dashboard = () => {
 
 
     return (
-        <div className="flex flex-col  justify-center items-center mt-24">
-            <div className="flex gap-1 tabs">
-                <NavLink
-                    // className={pathname === '/dashboard/profile' ? 'active' : ''}
-                    to="/">Home
-                </NavLink>
-                <NavLink
-                    className={pathname === '/dashboard/profile' ? 'active' : ''}
-                    to="/dashboard/profile">Profile
-                </NavLink>
-                {admin && <NavLink
-                    className={pathname === '/dashboard/uploadImage' ? 'active' : ''}
-                    to="/dashboard/uploadImage">UploadImage
-                </NavLink>}
-                <NavLink
-                    // className={pathname === '/dashboard/uploadImage' ? 'active' : ''}
-                    to="/gallery">Gallery
-                </NavLink>
-            </div>
+        <>
+            <SparkContainer>
+                <div className="flex flex-col  justify-center items-center mt-24">
+                    {/* <ClickSound></ClickSound> */}
+                    <div className="flex gap-1 tabs">
+                        <NavLink
+                            // className={pathname === '/dashboard/profile' ? 'active' : ''}
+                            to="/">Home
+                        </NavLink>
+                        <NavLink
+                            className={pathname === '/dashboard/profile' ? 'active' : ''}
+                            to="/dashboard/profile">Profile
+                        </NavLink>
+                        {admin && <NavLink
+                            className={pathname === '/dashboard/uploadImage' ? 'active' : ''}
+                            to="/dashboard/uploadImage">UploadImage
+                        </NavLink>}
+                        <NavLink
+                            // className={pathname === '/dashboard/uploadImage' ? 'active' : ''}
+                            to="/gallery">Gallery
+                        </NavLink>
+                    </div>
 
-            <div>
-                <Outlet></Outlet>
-            </div>
-        </div>
+                    <div>
+                            <ClickSound></ClickSound>
+                        <Outlet></Outlet>
+                    </div>
+                </div>
+            </SparkContainer>
+        </>
     );
 };
 

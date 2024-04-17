@@ -4,6 +4,7 @@ import Footer from "../page/Footer/Footer";
 import { useEffect, useState } from "react";
 import Loader from "../Loader";
 import SparkContainer from "@kamiru/react-spark";
+import ClickSound from "../components/ClickSound";
 
 
 
@@ -23,7 +24,7 @@ const Main = () => {
     return (
         <>
             <SparkContainer randomnessOn={true} className=" ">
-
+                    <ClickSound></ClickSound>
                 {loading ? <Loader /> : <>
                     <Navbar />
 
