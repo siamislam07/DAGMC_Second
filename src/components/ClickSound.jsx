@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import Sound from 'react-sound';
+
 
 const ClickSound = () => {
     useEffect(() => {
