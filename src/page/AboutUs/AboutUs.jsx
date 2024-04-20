@@ -79,7 +79,7 @@ const AboutUs = () => {
             </div>
           </h3>
           <p>
-            dagmc2017@gmail.com@gmail.com
+          dagmc2017@gmail.com
           </p>
         </div>
       </div>
