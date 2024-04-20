@@ -10,20 +10,21 @@ import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 
 const Main = () => {
     const [loading, setLoading] = useState(false)
-    const [mute, setUnmute] = useState(false)
 
-    // const toggleMute = () => {
-    //     const audio = document.getElementById("homeAudio");
-    //     if (audio) {
-    //         if (mute) {
-    //             audio.volume = 1;
-    //         } else {
-    //             audio.volume = 0.4;
-    //         }
-    //     }
-    //     setUnmute(!mute);
-    // };
 
+    const [isPlaying, setIsPlaying] = useState();
+
+    const togglePlay = () => {
+        const audio = document.getElementById('backgroundMusic');
+        if (audio) {
+            if (isPlaying) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+            setIsPlaying(!isPlaying);
+        }
+    };
     useEffect(() => {
         setLoading(true)
         setTimeout(() => {
@@ -31,28 +32,41 @@ const Main = () => {
         }, 2000)
 
     }, [])
-    const location = useLocation()
-    const noGalleryWork = location.pathname.includes('gallery') || location.pathname.includes('e-workshop')
+    const location = useLocation();
+    const isGalleryOrWorkshop = location.pathname.includes('gallery') || location.pathname.includes('e-workshop');
+    const isGalleryAndWorkshop = location.pathname.includes('gallery') || location.pathname.includes('e-workshop');
+
+    useEffect(() => {
+        if (isGalleryOrWorkshop) {
+            const audio = document.getElementById('backgroundMusic');
+            if (audio) {
+                audio.pause();
+            }
+            setIsPlaying(false);
+        }
+    }, [isGalleryOrWorkshop, location.pathname]);
 
 
     return (
         <>
+            <audio id="backgroundMusic" loop   >
+                <source src="./holePage.mp3" />
+            </audio>
+            <button onClick={togglePlay} className={`fixed z-10 left-5 md:left-3 top-[550px] md:top-[890px] btn btn-outline btn-default border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none ${isGalleryAndWorkshop ? 'hidden' : ''}`}>
+                {isPlaying ? <FaVolumeUp /> : <FaVolumeMute />}
+            </button>
             <SparkContainer randomnessOn={true} className=" ">
+                {loading ? <Loader /> :
+                    <><ClickSound></ClickSound>
+                        <Navbar />
+                        <div className="min-h-[calc(100vh-68px)]">
 
-                <ClickSound></ClickSound>
-                
-                    <Navbar />
-                    
-                    <div className="min-h-[calc(100vh-68px)]">
+                            <Outlet>
 
-                        <Outlet>
+                            </Outlet>
+                        </div><Footer /></>
 
-                        </Outlet>
-                    </div>
-
-                    <Footer />
-                
-                
+                }
             </SparkContainer>
         </>
     );

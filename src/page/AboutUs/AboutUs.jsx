@@ -8,18 +8,18 @@ import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 // define "lord-icon" custom element with default properties
 defineElement(lottie.loadAnimation);
 const AboutUs = () => {
-  
 
-  
+
+
   useEffect(() => {
     Aos.init({ duration: 3000 })
-   
+
   }, [])
   return (
 
     <div className="max-w-[1200px] p-3  mx-auto mb-10 overflow-hidden">
       <PageTitle title="About" />
-      
+
       <div data-aos="fade-down" className="card overflow-hidden card-body card-compact caret-red-700  text-2xl  text-center   w-full   font-bold bg-[#00f7ff] shadow-2xl shadow-[#00f7ff] relative border-2 rounded-lg bg-transparent py-2.5 px-5  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full text-[#00f7ff] before:w-full before:origin-top-left before:scale-y-0 before:bg-[#00f7ff] before:transition-transform border-[#00f7ff]">
         <h3 className="font-bold text-red-500 text-4xl mb-2">
           About Our Debating Club
@@ -72,14 +72,14 @@ const AboutUs = () => {
         <div data-aos="fade-left" className="card overflow-hidden card-body w-full card-compact caret-red-700  text-2xl text-center    mx-auto  p-3  font-bold bg-[#00f7ff] shadow-2xl shadow-[#00f7ff]  border-2 rounded-lg bg-transparent py-2.5 px-5  transition-colors before:absolute before:left-0 before:top-0 before:-z-10  text-[#00f7ff]  before:bg-[#00f7ff] before:transition-transform border-[#00f7ff] ">
           <h3 className="font-bold text-red-500 text-4xl mb-2">
             <div className="flex items-center justify-center flex-col">
-            <img width="76" height="76" src="https://img.icons8.com/fluency/48/000000/secured-letter.png" alt="secured-letter"/>
+              <img width="76" height="76" src="https://img.icons8.com/fluency/48/000000/secured-letter.png" alt="secured-letter" />
               <span>
                 Contact
               </span>
             </div>
           </h3>
           <p>
-          jihanuddink2005@gmail.com
+            dagmc2017@gmail.com@gmail.com
           </p>
         </div>
       </div>

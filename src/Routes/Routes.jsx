@@ -11,14 +11,18 @@ import PrivateRoute from "./PrivateRoute";
 import Gallery from "../page/Gallery/Gallery";
 import PanelFirst from "../page/PanelFirst/PanelFirst";
 import About from "../page/About/About";
-import PanelSecend from "../page/PanelSecend.jsx/PanelSecend";
+
 import PanelThird from "../page/PanelThird.jsx/PanelThird";
 import AboutUs from "../page/AboutUs/AboutUs";
 import Dashboard from "../Layout/Dashboard";
 import Profile from "../page/Dashboard/Profile/Profile";
 import UploadImage from "../page/UploadImage/UploadImage";
 import AdminRoute from "./AdminRoute";
-import EworkShop from "../page/E-workshop/EworkShop";
+
+import PanelSecond from "../page/PanelSecend.jsx/PanelSecend";
+import WorkShop from "../page/E-workshop/WorkShop";
+// import WorkTest from "../page/E-workshop/WorkTest";
+// import EWorkShop from "../page/E-workshop/EworkShop";
 // import Profile from "../page/Profile/Profile";
 
 const router = createBrowserRouter([
@@ -54,7 +58,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/panel-member2",
-                element: <PanelSecend />
+                element: <PanelSecond />
             },
             {
                 path: "/panel-member3",
@@ -70,7 +74,8 @@ const router = createBrowserRouter([
             },
             {
                 path:'/e-workshop',
-                element:<EworkShop/>
+                element:<WorkShop/>
+                // element:<WorkTest/>
             }
         ]
     },

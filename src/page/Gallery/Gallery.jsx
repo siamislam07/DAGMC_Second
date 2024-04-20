@@ -10,7 +10,7 @@ const Gallery = () => {
     const [isPlaying, setIsPlaying] = useState(true);
 
     const togglePlay = () => {
-        const audio = document.getElementById('backgroundMusic');
+        const audio = document.getElementById('backgroundGalleryMusic');
         if (audio) {
             if (isPlaying) {
                 audio.pause();
@@ -83,12 +83,12 @@ const Gallery = () => {
 
     const reversedImages = images ? [...images].reverse() : [];
 
-
+// console.log(reversedImages);
 
     return (
-        <div>
+        <div className="mt-12">
             <PageTitle title="Gallery" />
-            <audio id="backgroundMusic" loop autoPlay  >
+            <audio id="backgroundGalleryMusic" loop autoPlay  >
                 <source src="./about.mp3" />
             </audio>
             <button onClick={togglePlay} className="fixed z-10 left-5 md:left-3  top-[550px] md:top-[890px] btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none">
@@ -97,7 +97,7 @@ const Gallery = () => {
             <div className="p-5 sm:p-8">
                 <div className="columns-1 scale-x-1  gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
                     {reversedImages?.map(img => (
-                        <div key={img?.id} className="relative mb-8 overflow-hidden rounded-lg transform transition-transform hover:scale-105 skew-on-hover">
+                        <div key={img?._id} className="relative mb-8 overflow-hidden rounded-lg transform transition-transform hover:scale-105 skew-on-hover">
                             <img
                             
                                 src={img?.url}

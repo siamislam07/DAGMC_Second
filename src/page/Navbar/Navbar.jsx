@@ -13,6 +13,7 @@ const Navbar = () => {
     const { user, } = useContext(AuthContext);
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const location = useLocation()
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
@@ -36,20 +37,7 @@ const Navbar = () => {
     }, [theme])
     //darkMode functions ends here
 
-    useEffect(() => {
 
-        const audioElement = document.getElementById('backgroundMusic');
-
-
-        audioElement.play();
-
-
-        // return () => {
-        //     audioElement.pause();
-
-        //     audioElement.currentTime = 0;
-        // };
-    }, []);
 
 
 
@@ -62,18 +50,6 @@ const Navbar = () => {
             <svg className="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
 
         </label>
-
-        {/* <MuteToggle /> */}
-        {/* <button onClick={toggleMute}>{isMuted ? 'Unmute' : 'Mute'}</button> */}
-        {/* <audio ref={audioRef} src="./firstAudio.mp3" type="audio/mpeg"></audio> */}
-        {/* <label className="swap swap-rotate">
-            <input type="checkbox" checked={!isMuted} onChange={toggleMute} />
-            {isMuted ? (
-                <img className="fill-current w-10 h-10" src="https://img.icons8.com/00F7FF/96/mute--v1.png" alt="mute--v1" onClick={toggleMute} />
-            ) : (
-                <img className="fill-current w-10 h-10" src="https://img.icons8.com/00F7FF/96/room-sound.png" alt="room-sound" onClick={toggleMute} />
-            )}
-        </label> */}
 
         <li><NavLink to='/' className=" btn btn-outline btn-default   border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none">Home</NavLink></li>
 
@@ -111,42 +87,55 @@ const Navbar = () => {
 
 
     </>
-    // const [mute, setMute] = useState(false);
-    const location = useLocation()
-    const [isPlaying, setIsPlaying] = useState(true);
-    const noGalleryWork = location.pathname.includes('gallery') || location.pathname.includes('e-workshop')
+    // // const [mute, setMute] = useState(false);
+    // const [isPlaying, setIsPlaying] = useState(false);
 
-    const audio = document.getElementById('backgroundMusic');
-    const togglePlay = () => {
-        if (audio) {
-            if (isPlaying) {
-                audio.pause();
-            }
-            else {
-                audio.play();
-            }
-            setIsPlaying(!isPlaying);
-        }
+    // useEffect(() => {
+    //     const audio = document.getElementById('backgroundMusic');
+    //     if (audio) {
+    //         if (isPlaying) {
+    //             audio.pause();
+    //         } else {
+    //             audio.play();
+    //         }
+    //     }
+    // }, [isPlaying]);
 
-    };
+    // useEffect(() => {
+    //     const audio = document.getElementById('backgroundMusic');
+    //     if (location.pathname.includes('gallery') || location.pathname.includes('e-workshop')) {
+    //         setIsPlaying(false);
+    //     } else {
+    //         setIsPlaying(true);
+    //     }
+    // }, [location.pathname]);
 
+    // const togglePlay = () => {
+    //     const audio = document.getElementById('backgroundMusic');
+    //     if (audio) {
+    //         if (isPlaying) {
+    //             audio.pause();
+    //         } else {
+    //             audio.play();
+    //         }
+    //         setIsPlaying(!isPlaying);
+    //     }
+    //     setIsPlaying(!isPlaying);
+    // };
 
     return (
-        <div className=" w-full  navbar  shadow-2xl mb-12 ">
-            <div className="w-full max-w-[1600px] mx-auto     xl:px-30 md:px-10 sm:px-2 px-4">
-                {
-                    noGalleryWork || <>
-                        <audio id='backgroundMusic' autoPlay >
-                            <source src="./holePage.mp3" type="audio/mpeg" />
-                        </audio>
-                        <button
-                            className="fixed z-10 left-5 md:left-3 top-[550px] md:top-[890px] btn btn-outline btn-default border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none"
-                            onClick={togglePlay}
-                        >
-                            {isPlaying ? <FaVolumeUp /> : <FaVolumeMute />}
+        <div className=" w-full  navbar  shadow-2xl  ">
+            <div className="w-full max-w-[1600px] mx-auto   xl:px-30 md:px-10 sm:px-2 px-4">
+                {/* {!(location.pathname.includes('gallery') || location.pathname.includes('e-workshop')) && (
+                <><audio id="backgroundMusic" >
+                        <source src="./holePage.mp3" type="audio/mpeg" />
+                    </audio><button
+                        className="fixed z-10 left-5 md:left-3 top-[550px] md:top-[890px] btn btn-outline btn-default border-b-red-800 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none bg-amber-600 hover:bg-amber-900 text-white animate-bounce hover:text-white hover:border-none"
+                        onClick={togglePlay}
+                    >
+                            {isPlaying ? <FaVolumeMute /> : <FaVolumeUp />}
                         </button></>
-
-                }
+                )} */}
                 <div className="navbar-start flex items-center ">
                     <div className="dropdown lg:hidden md:hidden">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

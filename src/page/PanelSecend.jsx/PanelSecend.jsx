@@ -10,7 +10,7 @@ import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 
 
 
-const PanelSecend = () => {
+const PanelSecond = () => {
     // const [mute, setUnmute] = useState(false)
 
     // const toggleMute = () => {
@@ -145,4 +145,4 @@ const PanelSecend = () => {
     );
 };
 
-export default PanelSecend;
+export default PanelSecond;
