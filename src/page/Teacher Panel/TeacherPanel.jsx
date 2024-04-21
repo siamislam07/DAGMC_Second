@@ -45,11 +45,11 @@ const TeacherPanel = () => {
         <>
             
             {/* <PageTitle title="Panel Member"/> */}
-            <img className=" mt-10 w-full" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Executive%20Panel%20 23-24&section=header&reversal=false&fontAlignY=50&animation=twinkling&strokeWidth=0&fontSize=33" />
+            <img className=" mt-10 w-full" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=Teacher%20Panel%20&section=header&reversal=false&fontAlignY=50&animation=twinkling&strokeWidth=0&fontSize=33"/>
 
 
 
-            <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12 mb-24 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12 mb-24 ">
 
 
                 {info?.map((item, i) => (
