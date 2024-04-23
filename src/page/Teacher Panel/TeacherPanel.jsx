@@ -15,8 +15,8 @@ const TeacherPanel = () => {
     const { isPending, data: info, isError, error } = useQuery({
         queryKey: ['PanelTeacher'],
         queryFn: async () => {
-            const res = await fetch('./TeacherPanel.json')
-            // const res = await fetch('http://localhost:3000/panelFirst')
+            const res = await fetch('https://dagmc-server.vercel.app/teacher')
+            // const res = await fetch('https://dagmc-server.vercel.app/panelFirst')
             return res.json()
         }
     })

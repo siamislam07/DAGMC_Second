@@ -16,8 +16,8 @@ const PanelFirst = () => {
     const { isPending, data: info, isError, error } = useQuery({
         queryKey: ['panelFirst'],
         queryFn: async () => {
-            const res = await fetch('https://dagmc-club-server.vercel.app/panelFirst')
-            // const res = await fetch('http://localhost:3000/panelFirst')
+            const res = await fetch('https://dagmc-server.vercel.app/panelFirst')
+            // const res = await fetch('https://dagmc-server.vercel.app/panelFirst')
             return res.json()
         }
     })
