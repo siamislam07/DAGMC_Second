@@ -59,7 +59,7 @@ const Debatepage = () => {
                 <div className="w-full  max-w-6xl mx-auto p-3  ">
 
                     <div className="grid  grid-cols-1  sm:grid-cols-2 md:grid-cols-2 
-                                    lg:grid-cols-2 gap-4 md:gap-14 mb-28 mx-auto ">
+                                    lg:grid-cols-2 gap-4 md:gap-14 mb-28 mx-auto justify-center items-center">
 
                         <div data-aos="fade-right" className="before:absolute  before:origin-top-left before:-z-10 before:h-full before:w-full  before:scale-y-0 before:bg-[#00f7ff] before:rounded-xl before:transition-transform before:duration-500  hover:text-black before:hover:scale-y-100 shadow-[#00f7ff] card max-w-80 md:max-w-full mx-auto w-full p-3  font-bold bg-[#00f7ff] shadow-2xl relative border-2 rounded-lg bg-transparent py-2.5 px-5  transition-colors  before:left-0 before:top-0  text-[#00f7ff] before:content-['']  border-[#00f7ff] ">
                             <div className=" card-body">
@@ -76,8 +76,8 @@ const Debatepage = () => {
                             </div>
                         </div>
 
-                        <div className="">
-                            <FaFan className="relative left-16 md:left-[500px] animate-spin shadow-[#00f7ff] drop-shadow-xl shadow-2xl rounded-full text-[#00f7ff]" size={140}/>
+                        <div className="flex justify-center items-center">
+                            <FaFan className="md:relative md:left-[300px] animate-spin shadow-[#00f7ff] drop-shadow-xl shadow-2xl rounded-full text-[#00f7ff]" size={140}/>
                         </div>
                             <div></div>
 
