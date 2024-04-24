@@ -21,6 +21,7 @@ import AdminRoute from "./AdminRoute";
 
 import PanelSecond from "../page/PanelSecend.jsx/PanelSecend";
 import WorkShop from "../page/E-workshop/WorkShop";
+import TeacherPanel from "../page/Teacher Panel/TeacherPanel";
 // import WorkTest from "../page/E-workshop/WorkTest";
 // import EWorkShop from "../page/E-workshop/EworkShop";
 // import Profile from "../page/Profile/Profile";
@@ -65,12 +66,16 @@ const router = createBrowserRouter([
                 element: <PanelThird />
             },
             {
-                path: '/about',
-                element: <About />
-            },
-            {
                 path: '/aboutUs',
                 element: <AboutUs />
+            },
+            // {
+            //     path: '/aboutUs',
+            //     element: <AboutUs />
+            // },
+            {
+                path: '/panel-member0',
+                element: <TeacherPanel/>
             },
             {
                 path:'/e-workshop',

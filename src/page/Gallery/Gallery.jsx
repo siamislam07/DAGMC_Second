@@ -23,8 +23,8 @@ const Gallery = () => {
     const { isPending, data: images, isError, error } = useQuery({
         queryKey: ['panelFirst'],
         queryFn: async () => {
-            const res = await fetch('https://dagmc-club-server.vercel.app/gallery')
-            // const res = await fetch('http://localhost:3000/gallery')
+            const res = await fetch('https://dagmc-server.vercel.app/gallery')
+            // const res = await fetch('https://dagmc-server.vercel.app/gallery')
             return res.json()
         }
     })

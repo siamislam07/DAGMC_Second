@@ -60,14 +60,20 @@ const Navbar = () => {
 
 
 
-        <details className="dropdown ">
+        <details className="dropdown">
             <summary className="btn btn-outline btn-default w-full  border-b-red-600  border-neutral transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none">PanelMembers</summary>
             <ul tabIndex={0} className="p-2 shadow menu ml-10 dropdown-content z-[1] gap-3 bg-base-200 rounded-box w-52">
                 {/* <li>
                     <NavLink to="/panel-member" className=" btn-outline w-full btn-default border-b-violet-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn ">Panel Member</NavLink>
                 </li> */}
+
+<li>
+                    <NavLink to='/panel-member0' className=" btn-outline  btn-default border-b-pink-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn p-1">Teacher Panel</NavLink>
+                    </li>
+
                 <li>
-                    <NavLink to='/panel-member1' className=" btn-outline  btn-default border-b-pink-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn p-1">Executive panel 2023-2024</NavLink></li>
+                    <NavLink to='/panel-member1' className=" btn-outline  btn-default border-b-pink-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn p-1">Executive panel 2023-2024</NavLink>
+                    </li>
 
                 <li>
                     <NavLink to='/panel-member2' className=" btn-outline btn-default border-b-lime-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn  p-1">Executive panel  2022-2023</NavLink>

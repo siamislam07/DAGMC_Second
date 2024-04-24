@@ -100,7 +100,7 @@ function DropzoneComponent(props) {
         console.log('dara',imageData[0]);
 
         const img = imageData[0]
-        axios.post('https://dagmc-club-server.vercel.app/gallery', img)
+        axios.post('https://dagmc-server.vercel.app/gallery', img)
             .then(res => {
                 console.log('Response from backend:', res.data);
                 if (res.data.insertedCount > 0) {
@@ -122,7 +122,7 @@ function DropzoneComponent(props) {
                     <input {...getInputProps()} />
                     <div>Drag and drop your images here.</div>
                 </div>
-                <aside className='mt-10 flex justify-center'>
+                <aside className='mt-10 max-w-96 flex justify-center'>
                     {thumbs}
                 </aside>
                 <button type='submit' className='w-full mt-8 border py-2 mb-4'>Submit</button>

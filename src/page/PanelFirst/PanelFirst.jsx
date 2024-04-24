@@ -16,8 +16,8 @@ const PanelFirst = () => {
     const { isPending, data: info, isError, error } = useQuery({
         queryKey: ['panelFirst'],
         queryFn: async () => {
-            const res = await fetch('https://dagmc-club-server.vercel.app/panelFirst')
-            // const res = await fetch('http://localhost:3000/panelFirst')
+            const res = await fetch('https://dagmc-server.vercel.app/panelFirst')
+            // const res = await fetch('https://dagmc-server.vercel.app/panelFirst')
             return res.json()
         }
     })
@@ -92,25 +92,25 @@ const PanelFirst = () => {
 
                                     <div className="rating  rating-sm">
                                         <input type="radio" name="rating-7" className="mask mask-star-2  bg-[#00f7ff]" />
-                                        <input type="radio" name="rating-7" className="mask mask-star-2  bg-[#00f7ff]" checked />
                                         <input type="radio" name="rating-7" className="mask mask-star-2  bg-[#00f7ff]" />
                                         <input type="radio" name="rating-7" className="mask mask-star-2  bg-[#00f7ff]" />
                                         <input type="radio" name="rating-7" className="mask mask-star-2  bg-[#00f7ff]" />
+                                        <input type="radio" name="rating-7" className="mask mask-star-2  bg-[#00f7ff]" checked/>
                                     </div>
                                     {/* lg */}
                                     <div className="rating rating-md">
                                         <input type="radio" name="rating-8" className="mask mask-star-2  bg-[#00f7ff]" />
-                                        <input type="radio" name="rating-8" className="mask mask-star-2  bg-[#00f7ff]" checked />
                                         <input type="radio" name="rating-8" className="mask mask-star-2  bg-[#00f7ff]" />
                                         <input type="radio" name="rating-8" className="mask mask-star-2  bg-[#00f7ff]" />
                                         <input type="radio" name="rating-8" className="mask mask-star-2  bg-[#00f7ff]" />
+                                        <input type="radio" name="rating-8" className="mask mask-star-2  bg-[#00f7ff]" checked/>
                                     </div>
 
                                     <div className="rating gap-1 ">
                                         <input type="radio" name="rating-3" className="mask mask-heart bg-red-400" />
                                         <input type="radio" name="rating-3" className="mask mask-heart bg-orange-400" />
                                         <input type="radio" name="rating-3" className="mask mask-heart bg-yellow-400" />
-                                        <input type="radio" name="rating-3" className="mask mask-heart bg-lime-400" checked />
+                                        <input type="radio" name="rating-3" className="mask mask-heart bg-lime-400" />
                                         <input type="radio" name="rating-3" className="mask mask-heart bg-green-400" />
                                     </div>
                                 </div>
