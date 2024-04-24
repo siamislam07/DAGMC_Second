@@ -90,7 +90,7 @@ const About = () => {
     return (
 
         <>
-        <div id="aboutUs" className="w-full  md:mx-auto lg:mx-auto max-w-6xl mx-auto">
+        <div id="aboutUs" className="w-full mt-20 md:mx-auto lg:mx-auto max-w-6xl mx-auto">
             {/* <h1 className="text-4xl text-center font-bold">Our Class Service</h1> */}
             <img className="border-[#00f7ff] border-b mx-auto mb-24  shadow-2xl shadow-[#00f7ff]" src="https://capsule-render.vercel.app/api?type=venom&height=305&color=gradient&text=Facilities%20Of%20Debating&textBg=false&animation=fadeIn&stroke=00f7ff&strokeWidth=-1" alt="" />
             <div id="aboutUs" className="w-full  max-w-6xl mx-auto p-3 ">

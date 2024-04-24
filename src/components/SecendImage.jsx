@@ -13,12 +13,12 @@ const SecendImage = () => {
   return (
 
 
-    <div className='relative mt-56 mb-32 mx-auto '>
+    <div className='relative mt-24 md:mt-56 mb-32 mx-auto '>
       <div className="hero transition-colors before:absolute before:-z-10 before:h-full text-white before:w-full before:origin-top-right  before:scale-x-0 before:bg-gradient-to-r from-violet-600 to-indigo-600 before:transition-transform before:duration-500 hover:text-black before:hover:scale-x-100 first-letter:origin-top-left">
 
         <div className="hero-content rounded-lg mt-1 overflow-hidden md:gap-56 flex-col-reverse md:flex-row    border-gray-800  ">
 
-          <img src={club_image2} className='w-[800px] overflow-hidden max-w-72 md:max-w-sm rounded-lg shadow-2xl	box-shadow: 80 25px 50px -12px rgb(5 5 5 / 500) shadow-[#00f7ff] ' />
+          <img src={club_image2} className='w-[800px] overflow-hidden max-w-72 md:max-w-lg rounded-lg shadow-2xl	box-shadow: 80 25px 50px -12px rgb(5 5 5 / 500) shadow-[#00f7ff] ' />
           <div>
 
             <h1 className="text-4xl text-center md:text-5xl overflow-hidden font-bold text-[#00f7ff] animate-pulse uppercase"> Join Our Debate club 
