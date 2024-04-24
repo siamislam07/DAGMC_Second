@@ -7,6 +7,7 @@ import About from "../About/About";
 
 
 import Email from "../Email/Email";
+import Debatepage from "../../components/Debatepage";
 
 
 
@@ -23,12 +24,9 @@ const Home = () => {
 
 
             <PageTitle title="Home" />
-
-
             <FirstImage />
             <SecendImage />
-
-            <About />
+            <Debatepage/>
             <Email />
 
 

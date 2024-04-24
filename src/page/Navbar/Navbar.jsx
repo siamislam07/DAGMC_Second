@@ -60,7 +60,7 @@ const Navbar = () => {
 
 
 
-        <details className="dropdown ">
+        <details className="dropdown">
             <summary className="btn btn-outline btn-default w-full  border-b-red-600  border-neutral transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none">PanelMembers</summary>
             <ul tabIndex={0} className="p-2 shadow menu ml-10 dropdown-content z-[1] gap-3 bg-base-200 rounded-box w-52">
                 {/* <li>

@@ -66,13 +66,13 @@ const router = createBrowserRouter([
                 element: <PanelThird />
             },
             {
-                path: '/about',
-                element: <About />
-            },
-            {
                 path: '/aboutUs',
                 element: <AboutUs />
             },
+            // {
+            //     path: '/aboutUs',
+            //     element: <AboutUs />
+            // },
             {
                 path: '/panel-member0',
                 element: <TeacherPanel/>

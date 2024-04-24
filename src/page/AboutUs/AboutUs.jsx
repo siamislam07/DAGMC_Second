@@ -4,6 +4,7 @@ import { defineElement } from 'lord-icon-element';
 import { useEffect, useState } from "react";
 import Aos from "aos";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
+import About from "../About/About";
 
 // define "lord-icon" custom element with default properties
 defineElement(lottie.loadAnimation);
@@ -16,7 +17,8 @@ const AboutUs = () => {
 
   }, [])
   return (
-
+    <>
+    <About/>
     <div className="max-w-[1200px] p-3  mx-auto mb-10 overflow-hidden">
       <PageTitle title="About" />
 
@@ -85,6 +87,7 @@ const AboutUs = () => {
       </div>
       <iframe data-aos="fade-up" className="w-full overflow-hidden rounded-xl shadow-2xl bg-[#00f7ff] shadow-[#00f7ff]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.4447005627007!2d90.36531957610975!3d23.767173678658985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0a8e021199f%3A0x603243603e34140a!2sGovt.%20Mohammadpur%20Model%20School%20%26%20College!5e0!3m2!1sen!2sbd!4v1713022820846!5m2!1sen!2sbd" width="600" height="450" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
     </div>
+   </>
   );
 };
 
