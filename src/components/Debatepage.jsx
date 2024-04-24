@@ -8,45 +8,7 @@ const Debatepage = () => {
         Aos.init({ duration: 3000 })
     }, [])
 
-    const data = [
-        {
-            title: "1",
-            description: "সংসদীয়",
-            commonClass: "card max-w-80 md:max-w-full mx-auto w-full p-3  font-bold bg-[#00f7ff] shadow-2xl shadow-[#00f7ff] relative border-2 rounded-lg bg-transparent py-2.5 px-5  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full text-[#00f7ff] before:w-full before:origin-top-left before:scale-y-0 before:bg-[#00f7ff] before:transition-transform before:duration-300 before:content-[''] hover:text-black before:hover:scale-y-100 border-[#00f7ff]",
-
-            hoverClass: "before:absolute  before:origin-top-left before:-z-10 before:h-full before:w-full  before:scale-y-0 before:bg-[#00f7ff] before:rounded-xl before:transition-transform before:duration-500  hover:text-black before:hover:scale-y-100 shadow-teal-500 ",
-            aos: 'fade-right'
-        },
-        {
-            title: "2.Public Speaking Abilities",
-            description: " Debating enhances public speaking skills by encouraging individuals to articulate their thoughts clearly, confidently, and persuasively in front of an audience. This is invaluable for presentations, job interviews, and leadership roles.",
-
-            commonClass: "card max-w-80 md:max-w-full mx-auto w-full p-3  font-bold bg-[#00f7ff] shadow-2xl shadow-[#00f7ff] relative border-2 rounded-lg bg-transparent py-2.5 px-5  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full text-[#00f7ff] before:w-full before:origin-top-left before:scale-y-0 before:bg-[#00f7ff] before:transition-transform before:duration-300 before:content-[''] hover:text-black before:hover:scale-y-100 border-[#00f7ff] ",
-
-            hoverClass: "before:absolute  before:origin-top-left before:-z-10 before:h-full before:w-full  before:scale-y-0 before:bg-[#00f7ff] before:rounded-xl before:transition-transform before:duration-500  hover:text-black before:hover:scale-y-100 shadow-teal-500",
-
-        },
-        {
-            title: "3.Research Skills",
-            description: " Engaging in debates necessitates thorough research to gather evidence, statistics, and examples to support one's arguments. Participants learn how to navigate various sources, assess credibility, and synthesize information effectively.",
-            commonClass: "card max-w-80 md:max-w-full mx-auto w-full p-3  font-bold bg-[#00f7ff] shadow-2xl shadow-[#00f7ff] relative border-2 rounded-lg bg-transparent py-2.5 px-5  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full text-[#00f7ff] before:w-full before:origin-top-left before:scale-y-0 before:bg-[#00f7ff] before:transition-transform before:duration-300 before:content-[''] hover:text-black before:hover:scale-y-100 border-[#00f7ff] ",
-
-            hoverClass: "before:absolute  before:origin-top-left before:-z-10 before:h-full before:w-full  before:scale-y-0 before:bg-[#00f7ff] before:rounded-xl before:transition-transform before:duration-500  hover:text-black before:hover:scale-y-100 shadow-teal-500",
-            aos: 'fade-left'
-        },
-        {
-            title: "4",
-            description: "সংসদীয়",
-            commonClass: "card max-w-80 md:max-w-full mx-auto w-full p-3  font-bold bg-[#00f7ff] shadow-2xl shadow-[#00f7ff] relative border-2 rounded-lg bg-transparent py-2.5 px-5  transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full text-[#00f7ff] before:w-full before:origin-top-left before:scale-y-0 before:bg-[#00f7ff] before:transition-transform before:duration-300 before:content-[''] hover:text-black before:hover:scale-y-100 border-[#00f7ff] ml-96",
-
-            hoverClass: "before:absolute  before:origin-top-left before:-z-10 before:h-full before:w-full  before:scale-y-0 before:bg-[#00f7ff] before:rounded-xl before:transition-transform before:duration-500  hover:text-black before:hover:scale-y-100 shadow-teal-500 ",
-            aos: 'fade-right'
-        }
-
-
-    ]
-
-
+   
 
     return (
 
@@ -77,7 +39,7 @@ const Debatepage = () => {
                         </div>
 
                         <div className="">
-                            <FaFan className="relative left-16 md:left-[500px] animate-spin shadow-[#00f7ff] drop-shadow-xl shadow-2xl rounded-full text-[#00f7ff]" size={140}/>
+                            <FaFan className="relative left-28 md:left-[425px] animate-spin lg:-left-36 shadow-[#00f7ff] drop-shadow-xl shadow-2xl rounded-full text-[#00f7ff]" size={140}/>
                         </div>
                             <div></div>
 
