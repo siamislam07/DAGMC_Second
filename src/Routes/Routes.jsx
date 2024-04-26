@@ -22,6 +22,7 @@ import AdminRoute from "./AdminRoute";
 import PanelSecond from "../page/PanelSecend.jsx/PanelSecend";
 import WorkShop from "../page/E-workshop/WorkShop";
 import TeacherPanel from "../page/Teacher Panel/TeacherPanel";
+import Betorko from "../components/Betorko";
 // import WorkTest from "../page/E-workshop/WorkTest";
 // import EWorkShop from "../page/E-workshop/EworkShop";
 // import Profile from "../page/Profile/Profile";
@@ -29,7 +30,7 @@ import TeacherPanel from "../page/Teacher Panel/TeacherPanel";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Main />,
+        element: <Main/>,
         errorElement: <ErrorPage />,
         children: [
             {
@@ -81,7 +82,33 @@ const router = createBrowserRouter([
                 path:'/e-workshop',
                 element:<WorkShop/>
                 // element:<WorkTest/>
+            },
+            {
+                path:'/Betorko',
+                element:<Betorko/>
+                // element:<WorkTest/>
+            },
+            {
+                path:'/shongshodeo',
+                element:<shongshodeo/>
+                
+            },
+            {
+                path:'/baroari',
+                element:<baroari/>
+                
+            },
+            {
+                path:'/besonatoni',
+                element:<besonatoni/>
+                
+            },
+            {
+                path:'/bipi',
+                element:<bipi/>
+                // element:<WorkTest/>
             }
+
         ]
     },
 

@@ -63,7 +63,7 @@ const Login = () => {
     return (
         <Center>
                 <PageTitle title="Login"/>
-            <div className="flex items-center mt-10 justify-center min-h-[800px] bg-black dark:bg-transparent  ">
+            <div className="flex items-center mt-10 justify-center min-h-[800px] bg-black dark:bg-transparent ">
 
                 <div className="flex bg-black rounded-2xl shadow-lg dark:bg-transparent dark:shadow-2xl">
                     {/* form section */}
