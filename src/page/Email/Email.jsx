@@ -48,7 +48,7 @@ const Email = () => {
                     </div>
                     <form className="space-y-6" ref={form} onSubmit={sendEmail}>
                         <div>
-                            <label className="text-sm text-[#00f7ff] shadow-2xl shadow-[#00f7ff]">Full name</label>
+                            <label className="text-sm text- shadow-2xl shadow-[#00f7ff]">Full name</label>
                             {/* <input   type="text" name="name" placeholder="Your name" className="w-full p-3  ring-1 rounded border ring-violet-800" /> */}
                             <input className="p-2 shadow-2xl shadow-[#00f7ff] px-3 w-full ring-1  ring-[#00f7ff] mt-2 rounded-xl border hover:shadow-lg" type="text" name="name" placeholder="Your name" required />
                         </div>
