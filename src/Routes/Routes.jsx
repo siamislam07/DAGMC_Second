@@ -23,6 +23,10 @@ import PanelSecond from "../page/PanelSecend.jsx/PanelSecend";
 import WorkShop from "../page/E-workshop/WorkShop";
 import TeacherPanel from "../page/Teacher Panel/TeacherPanel";
 import Betorko from "../components/Betorko";
+import Shongshodeo from "../page/DebatineTopics/Shongshodeo/Shongshodeo";
+import Baroari from "../page/DebatineTopics/Baroari/Baroari";
+import Sonatoni from "../page/DebatineTopics/Sonatoni/Sonatoni";
+import Bipi from "../page/DebatineTopics/Bipi/Bipi";
 // import WorkTest from "../page/E-workshop/WorkTest";
 // import EWorkShop from "../page/E-workshop/EworkShop";
 // import Profile from "../page/Profile/Profile";
@@ -45,10 +49,10 @@ const router = createBrowserRouter([
                 path: '/signup',
                 element: <SignUp />
             },
-            {
-                path: '/panel-member',
-                element: <Panel />
-            },
+            // {
+            //     path: '/panel-member',
+            //     element: <Panel />
+            // },
 
             {
                 path: '/gallery',
@@ -90,22 +94,22 @@ const router = createBrowserRouter([
             },
             {
                 path:'/shongshodeo',
-                element:<shongshodeo/>
+                element:<Shongshodeo/>
                 
             },
             {
                 path:'/baroari',
-                element:<baroari/>
+                element:<Baroari/>
                 
             },
             {
-                path:'/besonatoni',
-                element:<besonatoni/>
+                path:'/sonatoni',
+                element:<Sonatoni/>
                 
             },
             {
                 path:'/bipi',
-                element:<bipi/>
+                element:<Bipi/>
                 // element:<WorkTest/>
             }
 

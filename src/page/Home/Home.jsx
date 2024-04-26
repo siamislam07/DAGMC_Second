@@ -7,7 +7,7 @@ import About from "../About/About";
 
 
 import Email from "../Email/Email";
-import Debatepage from "../../components/Debatepage";
+import DebatePage from "../../components/DebatePage";
 
 
 
@@ -26,7 +26,7 @@ const Home = () => {
             <PageTitle title="Home" />
             <FirstImage />
             <SecendImage />
-            <Debatepage/>
+            <DebatePage/>
             <Email />
 
 

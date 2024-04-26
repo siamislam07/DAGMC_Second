@@ -67,13 +67,13 @@ const Navbar = () => {
                     <NavLink to="/panel-member" className=" btn-outline w-full btn-default border-b-violet-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn ">Panel Member</NavLink>
                 </li> */}
 
-<li>
+                <li>
                     <NavLink to='/panel-member0' className=" btn-outline  btn-default border-b-pink-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn p-1">Teacher Panel</NavLink>
-                    </li>
+                </li>
 
                 <li>
                     <NavLink to='/panel-member1' className=" btn-outline  btn-default border-b-pink-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn p-1">Executive panel 2023-2024</NavLink>
-                    </li>
+                </li>
 
                 <li>
                     <NavLink to='/panel-member2' className=" btn-outline btn-default border-b-lime-600 border-neutral transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#00f7ff] hover:border-none btn  p-1">Executive panel  2022-2023</NavLink>

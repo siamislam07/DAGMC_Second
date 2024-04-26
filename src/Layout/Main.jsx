@@ -32,6 +32,7 @@ const Main = () => {
         }, 2000)
 
     }, [])
+
     const location = useLocation();
     const isGalleryOrWorkshop = location.pathname.includes('gallery') || location.pathname.includes('e-workshop');
     const isGalleryAndWorkshop = location.pathname.includes('gallery') || location.pathname.includes('e-workshop');
@@ -46,7 +47,9 @@ const Main = () => {
         }
     }, [isGalleryOrWorkshop, location.pathname]);
 
-
+    useEffect(() => {
+        window.scroll(0, 0)
+    }, [location.pathname])
     return (
         <>
             <audio id="backgroundMusic" loop   >
